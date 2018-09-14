@@ -1,0 +1,17 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Wed, 20 Dec 2017 03:10:30 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: kqNd_2132_lastact=1513739429%09portal.php%09; expires=Thu, 21-Dec-2017 03:10:29 GMT; Max-Age=86400; path=/
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Set-Cookie: kqNd_2132_sid=Qi4I76; expires=Thu, 21-Dec-2017 03:10:29 GMT; Max-Age=86400; path=/
+Set-Cookie: kqNd_2132_auth=fc3bDj%2B%2BNNVCqLB5%2FVr05Tuqsk%2FO%2FFT5IG0HU%2FdlxaI6OKD%2BwMZ77eFTX%2FyVWidSJ7vRsVohxDlnxRv4A5zOE1sS7%2Bo; expires=Thu, 04-Jan-2018 03:10:29 GMT; Max-Age=1296000; path=/; HttpOnly
+Set-Cookie: kqNd_2132_loginuser=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/
+Set-Cookie: kqNd_2132_activationauth=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/
+Set-Cookie: kqNd_2132_pmnum=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/
+Content-Encoding: gzip
+

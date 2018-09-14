@@ -1,0 +1,19 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Wed, 20 Dec 2017 07:35:21 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: kqNd_2132_sid=U8jEiD; expires=Thu, 21-Dec-2017 07:35:20 GMT; Max-Age=86400; path=/
+Set-Cookie: kqNd_2132_lip=172.34.181.162%2C1513755115; path=/
+Set-Cookie: kqNd_2132_lastact=1513755320%09portal.php%09; expires=Thu, 21-Dec-2017 07:35:20 GMT; Max-Age=86399; path=/
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Set-Cookie: kqNd_2132_sid=U8jEiD; expires=Thu, 21-Dec-2017 07:35:20 GMT; Max-Age=86399; path=/
+Set-Cookie: kqNd_2132_auth=58556iFjWRKLZe3H0js19Df%2FBGOKMo0bDkmEtLBQKwiGpBANHdBgxYUbj7FoAlPukJgXyW4QWLXDgM00IDwf08Y6WZQ; expires=Thu, 04-Jan-2018 07:35:20 GMT; Max-Age=1295999; path=/; HttpOnly
+Set-Cookie: kqNd_2132_loginuser=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/
+Set-Cookie: kqNd_2132_activationauth=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/
+Set-Cookie: kqNd_2132_pmnum=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/
+Content-Encoding: gzip
+

@@ -1,0 +1,10 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Wed, 20 Dec 2017 03:10:29 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+P3P: CP="CURa ADMa DEVa PSAo PSDo OUR BUS UNI PUR INT DEM STA PRE COM NAV OTC NOI DSP COR"
+Set-Cookie: myauth_uid=Ad2yQGwpLJSi%2FFsyBqabraq6RhACFToa6rGcFs7rtgIfxJgLHhURotdYm%2BgZH0CUDZSzRC35vdmDmp3IZHhj0s0%2BM6h2mgLhp321jJ%2FXEQwMoY7hRb3pQxyRM1O1JSx5X3Ryu25aFKxcmnYsw%2FG19wDYiGA8XQ9SfaoVLANs6t95ITuBZzmnQhiKVcA8RXUXBWqExMum7b5COmZzuVCVXLDYyHN0VVY%2Bm4xtg6KTNrcr2b587Qnn1T7%2FVTY2G6owyKmOWEg9GgKWhq4zBQw4JIj03gsYh8KKfxr71jXx1%2FntrInbk8NUGXGDDruDMQxv%2Fz72q%2FXLvkijIIk%2BR606HA%3D%3D; expires=Sat, 09-Feb-2019 19:10:29 GMT; Max-Age=36000000; path=/; HttpOnly
+Content-Encoding: gzip
+

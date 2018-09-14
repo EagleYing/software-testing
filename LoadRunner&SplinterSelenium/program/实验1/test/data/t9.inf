@@ -1,0 +1,15 @@
+[t9]
+FileName1=t9.xml
+URL1=http://my.nuaa.edu.cn/forum.php?mod=post&action=reply&fid=201&tid=306828&fromvf=1&extra=&replysubmit=yes&infloat=yes&handlekey=vfastpost&inajax=1
+Total=2
+RequestHeaderFile=t9_RequestHeader.txt
+RequestBodyFile=t9_RequestBody.txt
+ResponseHeaderFile=t9_ResponseHeader.txt
+ContentType=text/xml
+SnapshotXmlFile=snapshot_5.xml
+FileName2=t9_popupcredit_bg.gif
+URL2=http://my.nuaa.edu.cn/static/image/common/popupcredit_bg.gif
+[ProtocolInfo]
+ProtocolId=QTWeb
+[AdditionalInfo]
+IsIgnorable=1

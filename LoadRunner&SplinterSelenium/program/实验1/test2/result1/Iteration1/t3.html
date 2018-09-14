@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="utf-8">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+	<meta name="format-detection" content="telphone=no,email=no">
+	<meta name="msapplication-tap-highlight" content="no">
+	<title>用户登录 - 纸飞机南航青年网络社区</title>
+	<link rel="stylesheet" href="resources/css/main.css">
+	<link rel="stylesheet" href="/lib/mui/css/mui.min.css">
+	<!--[if lt IE 10]>
+	<script src="resources/js/base64.js"></script>
+	<script src="resources/js/ieBetter.js"></script>
+	<script src="resources/js/html5.js"></script>
+	<script src="resources/js/classList.min.js"></script>
+	<![endif]-->
+	<script src="resources/js/my_encrypt.js"></script>
+	<script>var key=makeKeyPair("CCD6422D748DAB63F9CEAEC9315A844B647B01F40637899706CDC1683BDFA314F9568EEC404D20FF83872DAA492280544BC44FA11DBBE66467077017E76049F8DFA4F8BB3BD7AD7C39DC1FE6FB3B467CFD701BF81630296077B7F065D916A4CAE0C2A46E4FCD574344BF7B4EF1708EE3EF75CDF193DE1384A20C9895D4C3A6BFE1A8C4B120299F4BBEA8F020DFE2E89AF7D686C3FB13EDF34A89A22543CA9684CD73301F5081397990F2A84D0F3E3DA4C6AC356F5AA2237EAA6CFCA8540A3B81B61770516B87F132DFFFCD0F0268D9DD28F813E5E945C51D0F35604699B540D218FB2683EAB4E4A9E15FE0F6133FBBEDCDF4F495228D9A773FD337529EEA59BD")</script>
+</head>
+<body>
+	<!-- <header>
+		<div class="container">
+			<nav>
+				<ul class="nav-ul">
+					<a href="/portal.php"><li>门户</li></a>
+					<a href="/forum.php"><li>论坛</li></a>
+					<a href="/mall/"><li>商城</li></a>
+				</ul>
+			</nav>
+		</div>
+	</header> -->
+	<div class="wrapper">
+		<div class="container center">
+			<img src="resources/img/logo.png" alt="纸飞机南航青年网络社区" class="zfjlogo mt1 mb1">
+			<!--[if IE 8]>
+			<div class="tip tip-warning">你正在使用IE的一个旧版本，<a href="http://browsehappy.com/" target="_blank">点击这里</a>下载现代浏览器。</div>
+			<![endif]-->
+			<!--[if IE 7]>
+			<div class="tip tip-danger">你正在使用的IE浏览器已不被支持！<a href="http://browsehappy.com/" target="_blank">点击这里</a>下载现代浏览器。</div>
+			<![endif]-->		<div id="frame1" class="frame">
+					<!-- <div><h3><a href="/sso/?page=freshman" data-mui-color="primary" class="new-man">2017新生请点击这里注册</a></h3></div> -->
+			<div class="tabs v3">
+				<div id="tab1" class="tab tab-current">学号/工号</div>
+				<div id="tab2" class="tab">论坛账号</div>
+				<div id="tab3" class="tab">微信号</div>
+			</div>
+			<div class="groups">
+				<div id="group1" class="group group-current">
+					<div class="tip tip-info">使用你的学号/工号登录或注册。</div>
+					<form action="/sso/?page=login&redirect_uri=L3BsdWdpbi5waHA/aWQ9c3lubG9naW46bG9naW5jaGVjayZyZWRpcmVjdF91cmk9TDNCdmNuUmhiQzV3YUhBPQ==" method="post" class="center" autocomplete="off" onsubmit="encrypt(this)">
+						<input type="hidden" name="token" value="ZGEzOWEzZWU1ZTZiNGIwZDMyNTViZmVmOTU2MDE4OTBhZmQ4MDcwOQ==">
+						<input type="hidden" name="type" value="ded">
+						<div class="mui-form-group">
+							<input class="mui-form-control" type="text" name="username" required>
+							<label class="mui-form-label">学号/工号</label>
+						</div>
+						<div class="mui-form-group">
+							<input class="mui-form-control" type="password" name="password" required>
+							<input class="mui-form-control hidden" type="password">
+							<label class="mui-form-label">密码</label>
+						</div>
+						<button type="submit" class="mui-btn" data-mui-color="primary">登录</button>
+					</form>
+				</div>
+				<div id="group2" class="group">
+					<div class="tip tip-info">使用你在纸飞机的昵称和密码登录。</div>
+					<form action="/sso/?page=login&redirect_uri=L3BsdWdpbi5waHA/aWQ9c3lubG9naW46bG9naW5jaGVjayZyZWRpcmVjdF91cmk9TDNCdmNuUmhiQzV3YUhBPQ==" method="post" class="center" autocomplete="off" onsubmit="encrypt(this)">
+						<input type="hidden" name="token" value="ZGEzOWEzZWU1ZTZiNGIwZDMyNTViZmVmOTU2MDE4OTBhZmQ4MDcwOQ==">
+						<input type="hidden" name="type" value="dz">
+							<div class="mui-form-group">
+								<input class="mui-form-control" type="text" name="username" required>
+								<label class="mui-form-label">论坛昵称</label>
+							</div>
+							<div class="mui-form-group">
+								<input class="mui-form-control" type="password" name="password" required>
+								<input class="mui-form-control hidden" type="password">
+								<label class="mui-form-label">论坛密码</label>
+							</div>
+							<button type="submit" class="mui-btn" data-mui-color="primary">登录</button>
+						</table>
+					</form>
+				</div>
+				<div id="group3" class="group">
+					<div class="tip tip-info">点击公众号“南航纸飞机”菜单中的“纸飞机→万能扫码”，并将手机摄像头对准上方二维码。</div>
+					<img id="wechat_qrcode" src="http://my.nuaa.edu.cn/mytools/?tool=qrcode&text=wechat://b13c7efeccedd21b87c5d9205daba3a4adb0ebae" alt="扫码登录">
+				</div>
+			</div>
+				</div>
+	</div>
+	<script>
+		var code="b13c7efeccedd21b87c5d9205daba3a4adb0ebae";
+		var redirect_uri="/plugin.php?id=synlogin:logincheck&redirect_uri=L3BvcnRhbC5waHA=";
+		var bredirect_uri="L3BsdWdpbi5waHA/aWQ9c3lubG9naW46bG9naW5jaGVjayZyZWRpcmVjdF91cmk9TDNCdmNuUmhiQzV3YUhBPQ==";
+		var oauth=false;
+		function encrypt(form){
+			form.password.value=my_encrypt(form.password.value,key);
+		}
+	</script>
+	<script src="resources/js/wechat_query.js"></script>
+</div><script src="/lib/mui/js/mui.min.js"></script><script src="resources/js/main.js"></script></body></html>

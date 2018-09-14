@@ -1,0 +1,15 @@
+[t15]
+FileName1=t15.html
+URL1=http://my.nuaa.edu.cn/mall/?m=mall&c=goods&a=talk_add
+Total=2
+RequestHeaderFile=t15_RequestHeader.txt
+RequestBodyFile=t15_RequestBody.txt
+ResponseHeaderFile=t15_ResponseHeader.txt
+ContentType=application/json
+SnapshotXmlFile=snapshot_5.xml
+FileName2=t15_anticheat.html
+URL2=http://bdimg.share.baidu.com/static/api/js/component/anticheat.js?v=44b9b245.js
+[ProtocolInfo]
+ProtocolId=QTWeb
+[AdditionalInfo]
+IsIgnorable=1

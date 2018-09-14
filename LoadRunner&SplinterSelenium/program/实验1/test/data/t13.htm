@@ -1,0 +1,597 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>搜索 - 南航mall</title>
+	<link rel="stylesheet" type="text/css" href="./Application/Common/Css/common.css">
+	<script type="text/javascript" src="./Application/Common/Js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="./Application/Common/Js/collect.js"></script>	
+	<script type="text/javascript" src="./Application/Common/Js/page.js"></script>	
+	<script type="text/javascript">
+		var page="mall";
+		var page_this=1;
+	</script>
+</head>
+<body>
+	<!--[if IE 7]>
+	<style>
+		.banner_left{	margin-left:-684px;}
+		.panel-left	{	min-height:800px;}
+		.mes_line {border-bottom: 1px dotted grey;padding-bottom: 0px;padding-top: 0px;line-height:50px;}
+		#caozuo_area {margin-top:150px;}
+	</style>
+	<![endif]-->
+<div class="header_top">
+	<div>
+		<div class="fl">
+			<a href="/portal.php">门户</a>
+			<a href="/forum.php">论坛</a>
+			<a href="/mall">商城</a>
+			<a href="/wiki">百科</a>
+			<!-- <a href="/zhidao">知道</a> -->
+			<!-- <a href="/wenku">文库</a> -->
+		</div>
+		<div class="fr">
+									<a href='?m=home&lb=4'>我的收藏</a>
+			<a href='?m=home&lb=2'>我的东西</a>
+			<span>|</span>
+			<a href='?m=home&lb=1'>
+			<span>提醒</span>			</a><span>|</span>
+			<a href="?m=home&lb=1">ha ha</a>
+			<a href="/sso/?action=logout&redirect_uri=L21hbGwvP209bWFsbCZhPXNlYXJjaCZzZWFyY2hfY29udGVudD3lkInku5Ymc2VhcmNoX3R5cGU9MA==">注销</a>		</div>
+	</div>
+</div>
+<div class="header_center">
+	<div class="set_width">
+		<div class="logo" onclick="window.location.href='/mall'"></div>
+		<div style="margin-top:25px;margin-left:20px;height:40px;width:340px;float:left;">
+			<table class="lead" border="0">
+				<tr>
+					<td width="75px"><div id="mall_link"><a href="?m=mall">集市</a></div></td> 
+					<td width="105px"><div id="index_link"><a href="?m=home">个人中心</a></div></td>
+					<!--<td width="105px"><div id="change_link"><a href="?m=chan">换客天地</a></div></td>-->
+				</tr>
+				<tr>
+					<td><div class="red_line"></div></td>
+					<td><div class="green_line"></div></td>
+					<!--<td><div class="blue_line"></div></td>-->
+				</tr>
+			</table>
+		</div>
+		<div class="search">
+			<form name="search" method="post" action="?m=mall&a=search" style="height:26px;width:350px;margin-right:-8px;">
+				<div class="miao" style="float:left;border:1px solid #CCC;"><div class="select_mod">
+					&nbsp;<span class="search_sort_txt">全部</span>
+					<em></em>
+					<input type="hidden" name="search_type" id="search_type_top" value="0">
+					<ul id="search_sort_list">
+						<li class="search_list" id="search_all">全部</li>
+						<li class="search_list" id="search_mall">集市</li>
+						<li class="search_list" id="search_chan">换客</li>
+					</ul>
+				</div></div>
+				<input type="text" name="search_content" class="search_content" id="search_content_top" style="float:left;border:1px solid #CCC;line-height:24px;font-size:13px;" placeholder="&nbsp;请输入要搜索的商品名" x-webkit-speech/>
+				<input type="image" id="search_button" src="Application/Common/Image/search_button.jpg" height="26px" style="float:left;border:1px solid #CCC;"/>
+			</form>
+		</div>
+	</div>
+</div>
+<div class="header_bottom_mall"><div class="banner_mall">		<div class="set_width">
+			<div class="banner_left">				<div class="menu">
+					<table class="menu_table" border="0">
+						<tr>
+							<td><a href="?m=mall&a=scan&lb=0">手机</a></td>
+							<td><a href="?m=mall&a=scan&lb=1">电子</a></td> 
+						</tr>
+						<tr>
+							<td><a href="?m=mall&a=scan&lb=2">书籍</a></td>
+							<td><a href="?m=mall&a=scan&lb=3">车辆</a></td> 
+						</tr>
+						<tr>
+							<td><a href="?m=mall&a=scan&lb=4">服饰</a></td>
+							<td><a href="?m=mall&a=scan&lb=5">化妆</a></td> 
+						</tr>
+						<tr>
+							<td><a href="?m=mall&a=scan&lb=6">日用</a></td>
+							<td><a href="?m=mall&a=scan&lb=7">乐器</a></td> 
+						</tr>
+						<tr>
+							<td><a href="?m=mall&a=scan&lb=10">虚拟</a></td>
+							<td><a href="?m=mall&a=scan&lb=11">食品</a></td> 
+						</tr>
+						<tr>
+							<td><a href="?m=mall&a=scan&lb=8">房屋</a></td>
+							<td><a href="?m=mall&a=scan&lb=9">其他</a></td> 
+						</tr>
+					</table>
+				</div>	
+			</div>
+			<div class="banner_center"></div>			<div class="banner_right">
+				<!-- <form method="post" id="new_demand" action="?c=newgoods">
+					<div style="width:126px;margin:0px auto;height:28px;border:0px solid black;">
+						<div class="in_where" id="in_mall">在集市</div>
+						<div class="in_where" id="in_change">在换客</div>
+					</div>
+					<input type="hidden" name="in_where" id="in_where_input" value="0"/> -->
+					<div class="out_put" style="line-height: 66px;">
+						<a href="?c=newgoods">发布新需求</a>
+					</div>
+				<!-- </form> -->
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+var gree=$('.green_line');
+var red=$('.red_line');
+var blue=$('.blue_line');
+
+jQuery(function($){
+
+	if(page=='home')
+	{
+		gree.css("display","block");
+		red.css("display","none");
+		blue.css("display","none");
+	}
+	else if(page=='mall')
+	{
+		red.css("display","block");
+		gree.css("display","none");
+		blue.css("display","none");
+	}
+	else if(page=='chan')
+	{
+		blue.css("display","block");
+		gree.css("display","none");
+		red.css("display","none");
+	}
+	$('#index_link').hover(
+		function(){
+			gree.css("display","block");
+		},
+		function(){
+			if(page!="home")
+			{
+				gree.css("display","none");
+			}
+		});
+	$('#mall_link').hover(
+		function(){
+			red.css("display","block");
+		},
+		function(){
+			if(page!="mall")
+			{
+				red.css("display","none");
+			}
+		});
+	$('#change_link').hover(
+		function(){
+			blue.css("display","block");
+		},
+		function(){
+			if(page!="index")
+			{
+				blue.css("display","none");
+			}
+		});
+
+	$('.search_list').hover(
+		function(){
+			$(this).css("background-color","rgb(224, 224, 224)");
+		},
+		function(){
+			$(this).css("background-color","white");
+		});
+	$('.in_where').click(
+		function(){
+			if($(this).attr('id')=="in_change")
+			{
+				$('#in_change').css("background-color","#F56C7E");
+				$('#in_mall').css("background-color","#EFF4EE");
+				$('#in_where_input').val("1");
+			}
+			else
+			{
+				$('#in_change').css("background-color","#EFF4EE");
+				$('#in_mall').css("background-color","#F56C7E");
+				$('#in_where_input').val("0");
+			}
+		});
+	$('.search_list').click(	//$_GET['type']=0全部 1商城 2换客
+		function(){
+			var type=$(this).attr('id');
+			var aim=$('.search_sort_txt');
+			if(type=="search_all")
+			{
+				aim.html('全部');
+				$('#search_type').val('0');
+			}	
+			else if(type=="search_chan")
+			{
+				aim.html('换客');
+				$('#search_type').val('2');
+			}
+			else if(type=="search_mall")
+			{
+				aim.html('集市');
+				$('#search_type').val('1');
+			}
+				
+			$('#search_sort_list').css("display","none");
+		});
+	$('.miao').hover(
+		function(){
+			$('#search_sort_list').css("display","block");
+		},
+		function(){
+			$('#search_sort_list').css("display","none");
+		});
+	$('#search_button').click(	//搜索不为空
+		function(e){
+			e.preventDefault();
+			if($('#search_content_top').val()!='')
+				window.location.href="?m=mall&a=search&search_content="+$('#search_content_top').val()+"&search_type="+$('#search_type_top').val();
+		});
+	$(window).scroll(function() //导航栏滚动事件
+	{
+		var th=$('.banner_left');
+		if(th.length<=0)
+			th=$('.banner_left_chan');
+		var scroll=$(window).scrollTop();		//获取滚动条上方隐藏的高度
+		if(scroll < 95)
+		{
+			th.css({top:95-scroll});
+		}		
+		else
+		 	th.css({top:'0px'});
+	});
+
+	$(window).keydown(
+		function(event)
+		{
+  			switch(event.keyCode)	//如果按下enter
+  			{
+  				case 13:
+  				{
+					if($('#search_content_top').is(':focus')==true)
+					{
+						event.preventDefault();
+						if($('#search_content_top').val()!='')
+						window.location.href="?m=mall&a=search&search_content="+$('#search_content_top').val()+"&search_type="+$('#search_type_top').val();
+					}
+			  	}	
+  			}
+  		});
+	$('.out_put').click(function(){
+		$('#new_demand').submit();
+	});
+
+	$('.out_put').hover(
+		function(){
+			$(this).css("font-weight","bold");
+		},
+		function()
+		{
+			$(this).css("font-weight","normal");
+		});
+});
+</script>
+
+	<div class="set_width panel-all clearfix" style="min-height:600px;margin-top:30px;">
+		<div class="clearfix">
+			<form name="search_new" id="search_new" method="get">
+				<input type="hidden" name="search_type" id="search_type" value="0" />
+				<input type="text" value="吉他" id="search_content" name="search_content" style="border:3px solid #34b787;width:500px;height:22px;line-height:22px;margin-bottom:13px;font-size:14px;padding:5px 5px 4px 4px;float:left;font-weight:bold;" x-webkit-speech><div style="width: 70px;height: 37px;float: left;background-color: #34B787;line-height: 37px;color: white;text-align: center;cursor: pointer;font-size: 16px;" id="search_page">搜 索</div>
+			</form>
+		</div>
+		<div class="panel-center" style="width:650px;margin-top:20px;">
+							<div class="home_box clearfix" id="9043"  style="width:100%;">
+						<div class="home_box_right" style="width:100%;">
+							<div class="box_right_top" style="width:100%;">
+								<div style="float:left;font-size:16px;line-height:32px;font-weight:bold;color:#FE5252;">出售</div>
+								<div style="margin-left:8px;float:left;font-size:15px;min-width:230px;font-weight:bold;line-height:34px;"><a href="./?c=goods&id=9043">吉他</a></div>
+								<div style="float:left;font-size:18px;color:#FE5252;line-height:32px;">&nbsp;&nbsp;&nbsp;150<span style="color:black;font-size:15px;"> RMB</span></div>
+								<div style="float:right;font-size:16px;line-height:36px;"><img src="Application/Mall/Image/talk_green.png"  onclick="document.location.href='./?m=mall&c=goods&id=9043#talk_both'" style="cursor:pointer;"> <span style="color:#66C8A3;">1</span>&nbsp;&nbsp;<img src="Application/Mall/Image/edit.png" class="edit"></div>
+							</div>
+							<div class="box_right_center" style="width:100%;"></div>
+							<div class="box_right_bottom" style="width:100%;min-height:50px;cursor:pointer;" onclick="document.location.href='./?m=mall&c=goods&id=9043'">
+								<table width="480px" height="28px" style="font-size:12px;float:left;"  class="info_table">
+									<tr>
+										<td width="32px">地点 :</td><td width="33px">江宁</td><td width="32px">分类 :</td><td width="35px">乐器</td>
+										<td  width="57px">联系方式 :</td><td>973291571</td>
+									</tr>
+								</table>
+								<div class="clearfix">
+									<div style="float:left;width:110px;"><img src="./Uploads/2017-06-11/593d0c46e73a2.JPG" width="110px"/></div>
+									<div style="float:right;width:525px;" class="description">八成新，没怎么用，入手三百，附一本民谣吉他教程，其他吉他辅助工具，弦，调音器等</div>
+																	</div>
+							</div>
+						</div>
+					</div><div class="home_box clearfix" id="9022"  style="width:100%;">
+						<div class="home_box_right" style="width:100%;">
+							<div class="box_right_top" style="width:100%;">
+								<div style="float:left;font-size:16px;line-height:32px;font-weight:bold;color:#FE5252;">出售</div>
+								<div style="margin-left:8px;float:left;font-size:15px;min-width:230px;font-weight:bold;line-height:34px;"><a href="./?c=goods&id=9022">防蓝光.暖宝宝.宣纸.吉他书</a></div>
+								<div style="float:left;font-size:18px;color:#FE5252;line-height:32px;">面议<span style="color:black;font-size:15px;"> RMB</span></div>
+								<div style="float:right;font-size:16px;line-height:36px;"><img src="Application/Mall/Image/talk_green.png"  onclick="document.location.href='./?m=mall&c=goods&id=9022#talk_both'" style="cursor:pointer;"> <span style="color:#66C8A3;">0</span>&nbsp;&nbsp;<img src="Application/Mall/Image/edit.png" class="edit"></div>
+							</div>
+							<div class="box_right_center" style="width:100%;"></div>
+							<div class="box_right_bottom" style="width:100%;min-height:50px;cursor:pointer;" onclick="document.location.href='./?m=mall&c=goods&id=9022'">
+								<table width="480px" height="28px" style="font-size:12px;float:left;"  class="info_table">
+									<tr>
+										<td width="32px">地点 :</td><td width="33px">江宁</td><td width="32px">分类 :</td><td width="35px">日用</td>
+										<td  width="57px">联系方式 :</td><td>qq2504898614</td>
+									</tr>
+								</table>
+								<div class="clearfix">
+									<div style="float:left;width:110px;"><img src="./Uploads/2017-06-10/593c034e85690.png" width="110px"/></div>
+									<div style="float:right;width:525px;" class="description">看图</div>
+																	</div>
+							</div>
+						</div>
+					</div><div class="home_box clearfix" id="8922"  style="width:100%;">
+						<div class="home_box_right" style="width:100%;">
+							<div class="box_right_top" style="width:100%;">
+								<div style="float:left;font-size:16px;line-height:32px;font-weight:bold;color:#FE5252;">出售</div>
+								<div style="margin-left:8px;float:left;font-size:15px;min-width:230px;font-weight:bold;line-height:34px;"><a href="./?c=goods&id=8922">出售吉他</a></div>
+								<div style="float:left;font-size:18px;color:#FE5252;line-height:32px;">&nbsp;&nbsp;&nbsp;200<span style="color:black;font-size:15px;"> RMB</span></div>
+								<div style="float:right;font-size:16px;line-height:36px;"><img src="Application/Mall/Image/talk_green.png"  onclick="document.location.href='./?m=mall&c=goods&id=8922#talk_both'" style="cursor:pointer;"> <span style="color:#66C8A3;">0</span>&nbsp;&nbsp;<img src="Application/Mall/Image/edit.png" class="edit"></div>
+							</div>
+							<div class="box_right_center" style="width:100%;"></div>
+							<div class="box_right_bottom" style="width:100%;min-height:50px;cursor:pointer;" onclick="document.location.href='./?m=mall&c=goods&id=8922'">
+								<table width="480px" height="28px" style="font-size:12px;float:left;"  class="info_table">
+									<tr>
+										<td width="32px">地点 :</td><td width="33px">江宁</td><td width="32px">分类 :</td><td width="35px">乐器</td>
+										<td  width="57px">联系方式 :</td><td>13218003531</td>
+									</tr>
+								</table>
+								<div class="clearfix">
+									<div style="float:right;width:100%" class="description">九月份入手的吉他
+九成新
+原价390
+但是调音时弦断了一根
+现在200出售</div>								</div>
+							</div>
+						</div>
+					</div><div class="home_box clearfix" id="8904"  style="width:100%;">
+						<div class="home_box_right" style="width:100%;">
+							<div class="box_right_top" style="width:100%;">
+								<div style="float:left;font-size:16px;line-height:32px;font-weight:bold;color:#66C8A3;">求购</div>
+								<div style="margin-left:8px;float:left;font-size:15px;min-width:230px;font-weight:bold;line-height:34px;"><a href="./?c=goods&id=8904">求购一把吉他</a></div>
+								<div style="float:left;font-size:18px;color:#FE5252;line-height:32px;">面议<span style="color:black;font-size:15px;"> RMB</span></div>
+								<div style="float:right;font-size:16px;line-height:36px;"><img src="Application/Mall/Image/talk_green.png"  onclick="document.location.href='./?m=mall&c=goods&id=8904#talk_both'" style="cursor:pointer;"> <span style="color:#66C8A3;">0</span>&nbsp;&nbsp;<img src="Application/Mall/Image/edit.png" class="edit"></div>
+							</div>
+							<div class="box_right_center" style="width:100%;"></div>
+							<div class="box_right_bottom" style="width:100%;min-height:50px;cursor:pointer;" onclick="document.location.href='./?m=mall&c=goods&id=8904'">
+								<table width="480px" height="28px" style="font-size:12px;float:left;"  class="info_table">
+									<tr>
+										<td width="32px">地点 :</td><td width="33px">江宁</td><td width="32px">分类 :</td><td width="35px">乐器</td>
+										<td  width="57px">联系方式 :</td><td>15850602265</td>
+									</tr>
+								</table>
+								<div class="clearfix">
+									<div style="float:right;width:100%" class="description">之前朋友留下了一把吉他，自己闲来没事开始入门学了些，觉得周末时候练练挺好的放松方式，可惜固定琴弦的那块板子起来了，音再也调不准了。想着毕业可能有同学要出，所以诚意求一把。入门的吉他就好，如有教程经验等可以交流指点更好，多谢。有出的同学请联系我微信i_am_hcl</div>								</div>
+							</div>
+						</div>
+					</div><div class="home_box clearfix" id="8538"  style="width:100%;">
+						<div class="home_box_right" style="width:100%;">
+							<div class="box_right_top" style="width:100%;">
+								<div style="float:left;font-size:16px;line-height:32px;font-weight:bold;color:#FE5252;">出售</div>
+								<div style="margin-left:8px;float:left;font-size:15px;min-width:230px;font-weight:bold;line-height:34px;"><a href="./?c=goods&id=8538">lava红松面单电箱吉他便宜卖</a></div>
+								<div style="float:left;font-size:18px;color:#FE5252;line-height:32px;">&nbsp;&nbsp;&nbsp;1600<span style="color:black;font-size:15px;"> RMB</span></div>
+								<div style="float:right;font-size:16px;line-height:36px;"><img src="Application/Mall/Image/talk_green.png"  onclick="document.location.href='./?m=mall&c=goods&id=8538#talk_both'" style="cursor:pointer;"> <span style="color:#66C8A3;">0</span>&nbsp;&nbsp;<img src="Application/Mall/Image/edit.png" class="edit"></div>
+							</div>
+							<div class="box_right_center" style="width:100%;"></div>
+							<div class="box_right_bottom" style="width:100%;min-height:50px;cursor:pointer;" onclick="document.location.href='./?m=mall&c=goods&id=8538'">
+								<table width="480px" height="28px" style="font-size:12px;float:left;"  class="info_table">
+									<tr>
+										<td width="32px">地点 :</td><td width="33px">不限</td><td width="32px">分类 :</td><td width="35px">乐器</td>
+										<td  width="57px">联系方式 :</td><td>电话17751034886 扣扣1976612369</td>
+									</tr>
+								</table>
+								<div class="clearfix">
+									<div style="float:left;width:110px;"><img src="./Uploads/2017-02-26/58b26e7823aaa.jpg" width="110px"/></div>
+									<div style="float:right;width:525px;" class="description">原价3280 16年4月购于淘宝旗舰店,现半价出校友
+正面有一磕碰掉漆,其他地方正常使用痕迹.
+音色很好,国产琴做工也不错,换新琴忍痛出手,
+人在江宁南区,可上门试琴,看心情长相可小刀.
+送原价480琴包,和原价40的达达里奥琴弦.
+主玩指弹,小姐姐买的话包入门教学</div>
+																	</div>
+							</div>
+						</div>
+					</div><div class="home_box clearfix" id="8385"  style="width:100%;">
+						<div class="home_box_right" style="width:100%;">
+							<div class="box_right_top" style="width:100%;">
+								<div style="float:left;font-size:16px;line-height:32px;font-weight:bold;color:#FE5252;">出售</div>
+								<div style="margin-left:8px;float:left;font-size:15px;min-width:230px;font-weight:bold;line-height:34px;"><a href="./?c=goods&id=8385">全新Adison旅行吉他34寸</a></div>
+								<div style="float:left;font-size:18px;color:#FE5252;line-height:32px;">&nbsp;&nbsp;&nbsp;380<span style="color:black;font-size:15px;"> RMB</span></div>
+								<div style="float:right;font-size:16px;line-height:36px;"><img src="Application/Mall/Image/talk_green.png"  onclick="document.location.href='./?m=mall&c=goods&id=8385#talk_both'" style="cursor:pointer;"> <span style="color:#66C8A3;">0</span>&nbsp;&nbsp;<img src="Application/Mall/Image/edit.png" class="edit"></div>
+							</div>
+							<div class="box_right_center" style="width:100%;"></div>
+							<div class="box_right_bottom" style="width:100%;min-height:50px;cursor:pointer;" onclick="document.location.href='./?m=mall&c=goods&id=8385'">
+								<table width="480px" height="28px" style="font-size:12px;float:left;"  class="info_table">
+									<tr>
+										<td width="32px">地点 :</td><td width="33px">江宁</td><td width="32px">分类 :</td><td width="35px">乐器</td>
+										<td  width="57px">联系方式 :</td><td>Q、微信： 1278726220</td>
+									</tr>
+								</table>
+								<div class="clearfix">
+									<div style="float:left;width:110px;"><img src="./Uploads/2016-12-10/584c21b35b928.jpg" width="110px"/></div>
+									<div style="float:right;width:525px;" class="description">全新的阿蒂森旅行吉他，原价599，可以去淘宝搜。微博抽奖中的，选了这一把，因为比较便携，音质也比同价位的大吉他好。弦距超低，手感好，因为吉他小，所以大横按非常轻松。适合新手或者想带吉他出门的朋友。</div>
+																	</div>
+							</div>
+						</div>
+					</div><div class="home_box clearfix" id="8321"  style="width:100%;">
+						<div class="home_box_right" style="width:100%;">
+							<div class="box_right_top" style="width:100%;">
+								<div style="float:left;font-size:16px;line-height:32px;font-weight:bold;color:#FE5252;">出售</div>
+								<div style="margin-left:8px;float:left;font-size:15px;min-width:230px;font-weight:bold;line-height:34px;"><a href="./?c=goods&id=8321">吉他</a></div>
+								<div style="float:left;font-size:18px;color:#FE5252;line-height:32px;">&nbsp;&nbsp;&nbsp;99<span style="color:black;font-size:15px;"> RMB</span></div>
+								<div style="float:right;font-size:16px;line-height:36px;"><img src="Application/Mall/Image/talk_green.png"  onclick="document.location.href='./?m=mall&c=goods&id=8321#talk_both'" style="cursor:pointer;"> <span style="color:#66C8A3;">0</span>&nbsp;&nbsp;<img src="Application/Mall/Image/edit.png" class="edit"></div>
+							</div>
+							<div class="box_right_center" style="width:100%;"></div>
+							<div class="box_right_bottom" style="width:100%;min-height:50px;cursor:pointer;" onclick="document.location.href='./?m=mall&c=goods&id=8321'">
+								<table width="480px" height="28px" style="font-size:12px;float:left;"  class="info_table">
+									<tr>
+										<td width="32px">地点 :</td><td width="33px">不限</td><td width="32px">分类 :</td><td width="35px">乐器</td>
+										<td  width="57px">联系方式 :</td><td>15150670731</td>
+									</tr>
+								</table>
+								<div class="clearfix">
+									<div style="float:left;width:110px;"><img src="./Uploads/2016-11-16/582c01ac680b4.JPG" width="110px"/></div>
+									<div style="float:right;width:525px;" class="description">由于毕业离校，现想低价出售吉他两个，购买之后一直很少弹，所以比较新，有意者联系手机号15150670731，本账号借用同学账号，无法联系。</div>
+																	</div>
+							</div>
+						</div>
+					</div><div class="home_box clearfix" id="8265"  style="width:100%;">
+						<div class="home_box_right" style="width:100%;">
+							<div class="box_right_top" style="width:100%;">
+								<div style="float:left;font-size:16px;line-height:32px;font-weight:bold;color:#FE5252;">出售</div>
+								<div style="margin-left:8px;float:left;font-size:15px;min-width:230px;font-weight:bold;line-height:34px;"><a href="./?c=goods&id=8265">卡马电箱吉他出售</a></div>
+								<div style="float:left;font-size:18px;color:#FE5252;line-height:32px;">&nbsp;&nbsp;&nbsp;550<span style="color:black;font-size:15px;"> RMB</span></div>
+								<div style="float:right;font-size:16px;line-height:36px;"><img src="Application/Mall/Image/talk_green.png"  onclick="document.location.href='./?m=mall&c=goods&id=8265#talk_both'" style="cursor:pointer;"> <span style="color:#66C8A3;">1</span>&nbsp;&nbsp;<img src="Application/Mall/Image/edit.png" class="edit"></div>
+							</div>
+							<div class="box_right_center" style="width:100%;"></div>
+							<div class="box_right_bottom" style="width:100%;min-height:50px;cursor:pointer;" onclick="document.location.href='./?m=mall&c=goods&id=8265'">
+								<table width="480px" height="28px" style="font-size:12px;float:left;"  class="info_table">
+									<tr>
+										<td width="32px">地点 :</td><td width="33px">江宁</td><td width="32px">分类 :</td><td width="35px">乐器</td>
+										<td  width="57px">联系方式 :</td><td>QQ547990826</td>
+									</tr>
+								</table>
+								<div class="clearfix">
+									<div style="float:left;width:110px;"><img src="./Uploads/2016-10-30/5815b80c553a7.jpg" width="110px"/></div>
+									<div style="float:right;width:525px;" class="description">这款琴，适合初学者进阶使用，打板共鸣不错，弦距合适，低音突出。但是，有一个缺点是延音时长不足。总的来说，性价比还不错。原价820</div>
+																	</div>
+							</div>
+						</div>
+					</div><div class="home_box clearfix" id="8264"  style="width:100%;">
+						<div class="home_box_right" style="width:100%;">
+							<div class="box_right_top" style="width:100%;">
+								<div style="float:left;font-size:16px;line-height:32px;font-weight:bold;color:#FE5252;">出售</div>
+								<div style="margin-left:8px;float:left;font-size:15px;min-width:230px;font-weight:bold;line-height:34px;"><a href="./?c=goods&id=8264">吉他星辰120出售</a></div>
+								<div style="float:left;font-size:18px;color:#FE5252;line-height:32px;">&nbsp;&nbsp;&nbsp;300<span style="color:black;font-size:15px;"> RMB</span></div>
+								<div style="float:right;font-size:16px;line-height:36px;"><img src="Application/Mall/Image/talk_green.png"  onclick="document.location.href='./?m=mall&c=goods&id=8264#talk_both'" style="cursor:pointer;"> <span style="color:#66C8A3;">1</span>&nbsp;&nbsp;<img src="Application/Mall/Image/edit.png" class="edit"></div>
+							</div>
+							<div class="box_right_center" style="width:100%;"></div>
+							<div class="box_right_bottom" style="width:100%;min-height:50px;cursor:pointer;" onclick="document.location.href='./?m=mall&c=goods&id=8264'">
+								<table width="480px" height="28px" style="font-size:12px;float:left;"  class="info_table">
+									<tr>
+										<td width="32px">地点 :</td><td width="33px">江宁</td><td width="32px">分类 :</td><td width="35px">乐器</td>
+										<td  width="57px">联系方式 :</td><td>QQ547990826</td>
+									</tr>
+								</table>
+								<div class="clearfix">
+									<div style="float:left;width:110px;"><img src="./Uploads/2016-10-30/5815b62f6d0f5.jpg" width="110px"/></div>
+									<div style="float:right;width:525px;" class="description">因进阶需要，想卖掉新手琴。这把琴总的来说挺不错，共鸣良好，延音时间合理，适合初学者使用。缺点在于打板等特殊技巧不适合，以及中音不突出。</div>
+																	</div>
+							</div>
+						</div>
+					</div><div class="home_box clearfix" id="8241"  style="width:100%;">
+						<div class="home_box_right" style="width:100%;">
+							<div class="box_right_top" style="width:100%;">
+								<div style="float:left;font-size:16px;line-height:32px;font-weight:bold;color:#FE5252;">出售</div>
+								<div style="margin-left:8px;float:left;font-size:15px;min-width:230px;font-weight:bold;line-height:34px;"><a href="./?c=goods&id=8241">一把练习吉他，与老师教程</a></div>
+								<div style="float:left;font-size:18px;color:#FE5252;line-height:32px;">&nbsp;&nbsp;&nbsp;500<span style="color:black;font-size:15px;"> RMB</span></div>
+								<div style="float:right;font-size:16px;line-height:36px;"><img src="Application/Mall/Image/talk_green.png"  onclick="document.location.href='./?m=mall&c=goods&id=8241#talk_both'" style="cursor:pointer;"> <span style="color:#66C8A3;">0</span>&nbsp;&nbsp;<img src="Application/Mall/Image/edit.png" class="edit"></div>
+							</div>
+							<div class="box_right_center" style="width:100%;"></div>
+							<div class="box_right_bottom" style="width:100%;min-height:50px;cursor:pointer;" onclick="document.location.href='./?m=mall&c=goods&id=8241'">
+								<table width="480px" height="28px" style="font-size:12px;float:left;"  class="info_table">
+									<tr>
+										<td width="32px">地点 :</td><td width="33px">本部</td><td width="32px">分类 :</td><td width="35px">乐器</td>
+										<td  width="57px">联系方式 :</td><td>15651809619</td>
+									</tr>
+								</table>
+								<div class="clearfix">
+									<div style="float:right;width:100%" class="description">刚买的琴，课程每个周六</div>								</div>
+							</div>
+						</div>
+					</div>				<div class="page">
+				<div class="page_left_left" onclick="next_page(1)"></div>
+												<!--//页数小于10-->
+					<div class="page_center" id="page_1" onclick="next_page(1)"><div class="page_font">1</div></div><div class="page_center" id="page_2" onclick="next_page(2)"><div class="page_font">2</div></div><div class="page_center" id="page_3" onclick="next_page(3)"><div class="page_font">3</div></div><div class="page_center" id="page_4" onclick="next_page(4)"><div class="page_font">4</div></div>				<div class="page_right" onclick="next_page(2)"></div>				<div class="page_right_right" onclick="next_page(4)"></div>
+				</div>
+
+		</div>
+		<div class="panel-right">
+	<div class="record_font" style="background-color:red;display:none;+display:block;">&nbsp;&nbsp;通知</div>
+		<div class="record_area" style="background-color:#f66c7f;min-height:50px;padding-bottom:5px;display:none;+display:block;">
+			商城暂不兼容IE8内核以下的浏览器(包括360浏览器)，我们对给您造成的不便表示抱歉，感谢您的支持.
+		</div>
+		
+	<div class="record_font">&nbsp;&nbsp;商城公告</div>
+	<div class="record_area" style="min-height:50px;padding-bottom:5px;">
+		<ul>
+			<li><a href='./?m=admin&c=notice&id=8'>南航MALL管理办法</a></li><li><a href='./?m=admin&c=notice&id=27'>南航MALL正式上线</a></li><li><a href='./?m=admin&c=notice&id=9'>南航MALL用户指南</a></li><li><a href='./?m=admin&c=notice&id=29'>【商品】发布需知</a></li><li><a href='./?m=admin&c=notice&id=28'>【店铺】申请必读</a></li>		</ul>
+	</div>
+	<div class="record_font">&nbsp;&nbsp;最新店铺<div id="new_shop_a" style="font-size:12px;display:inline;float:right;padding-top:3px;margin-right:6px;">&nbsp;<a href="./?m=mall&c=shop&a=new_shop">我要开店</a></div></div>
+	<div class="record_area clearfix" style="min-height:10px;">
+		<ul>
+			<li><a href='./?m=mall&c=shop&id=189'>GChampion</a></li><li><a href='./?m=mall&c=shop&id=188'>文仔的鞋铺</a></li><li><a href='./?m=mall&c=shop&id=187'>啦啦啦是我</a></li><li><a href='./?m=mall&c=shop&id=186'>樱桃的小窝</a></li><li><a href='./?m=mall&c=shop&id=185'>陕西苹果</a></li>		</ul>
+		<div class="a_underline" style="float:right;margin:10px 5px 6px 0px;font-size:13px;"><a href='./?m=mall&c=shop&a=shop_list'>更多店铺...</a></div>
+	</div>
+	<div class="record_font">&nbsp;&nbsp;全站推荐</div>
+	<div class="record_area" style="padding-top:10px;">
+			</div>
+</div>
+	</div>
+	<div class="common_bottom" style="margin-top:0px;height:30px;width:100%;background-color:#404040;">
+	<div style="color:white;width:410px;margin:0 auto;line-height:30px;font-size:13px;">
+		<a href="http://my.nuaa.edu.cn">纸飞机南航青年网络社区</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copyright © 2014 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="./?m=mall&a=team">关于我们</a>
+	</div>
+</div>
+</body>
+<script type="text/javascript">	
+jQuery(function($){
+	$('.header_bottom_mall').css("display","none");
+
+	$('#search_page').click(function (e){
+		e.preventDefault();
+		if($('#search_content').val()!='')
+			window.location.href="./?m=mall&a=search&search_content="+$('#search_content').val()+"&search_type="+$('#search_type').val();
+	});
+
+	$('#page_'+page_this).css("background-image","url(Application/Mall/Image/circle_hover.png)");
+	$('.page_center').hover(
+		function()
+		{
+			var th=$(this);
+			th.css("background-image","url(Application/Mall/Image/circle_hover.png)");
+		},
+		function()
+		{
+			var th=$(this);
+			if(th.children().html() != page_this)
+			{
+				th.css("background-image","url(Application/Mall/Image/circle.png)");
+			}
+		});
+
+	$(window).keydown(
+		function(event)
+		{
+  			switch(event.keyCode)	//如果按下enter
+  			{
+  				case 13:
+  				{
+  					event.preventDefault();
+  					if(!$('.search_content').is(':focus'))
+  						window.location.href="./?m=mall&a=search&search_content="+$('#search_content').val()+"&search_type="+$('#search_type').val();
+  					else
+						window.location.href="./?m=mall&a=search&search_content="+$('#search_content_top').val()+"&search_type="+$('#search_type_top').val();
+  				}	
+  			}
+  		});
+
+
+	window.next_page=function(num)
+	{
+		window.location.href=window.location.href+'&page='+num;
+	}
+});
+</script>
+</html>

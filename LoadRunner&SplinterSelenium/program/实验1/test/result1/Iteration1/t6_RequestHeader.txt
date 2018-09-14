@@ -1,0 +1,10 @@
+GET /template/newzfj/images/none HTTP/1.1
+Referer: http://my.nuaa.edu.cn/portal.php
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729)
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-cn
+Accept: */*
+Connection: Keep-Alive
+Host: my.nuaa.edu.cn
+Cookie: PHPSESSID=l5kgj0tdt8j50l64ldnu4j7do3; kqNd_2132_sid=gGs7Vs; myauth_uid=q4QCG65cffcBL9SuT4go4Q1CC0U0DhVFigJC8VroFaEBKNMaPDHN3wmo13xjpDKn%2FC%2FPXwQt8b8u5uqe1xmxrfz%2BD4CDX%2FzfGAc2WJDJ%2F9qhYNMUlpd%2BzO3GsM2963UopmKeSjBC65fHy2BTp2fU7wbT8oi9pxvgEXM%2Fcmo8D9v5NZfOnYWeuhJafN0Ss68Q2w5flReToXqwCm450nZBGNm9Hc%2B8%2FrgVetL4mvJOMxqjkXbBsxWW%2BMrQZE9dhZYBXDNOhjE%2BRqAJHbAHR%2Fxij3VokervynnrYw8dh%2BaZAM5lobQdwT7%2BYLLTebKQowlYQT1lSSg%2BJxdE0vFRMKYyew%3D%3D; kqNd_2132_lastact=1513755320%09home.php%09misc; kqNd_2132_saltkey=G1LccVLP; kqNd_2132_lastvisit=1513751720; kqNd_2132_ulastactivity=66f06%2FOyWzmiNyiDCTKTcuzaVzoUfwE2jlcUq3kdzROGxPjuXK4p; kqNd_2132_auth=4c82KMqYkLnud4FcEm59%2FaNfivutEt5Z%2FDsdIhFQaYYJk1Y4zePP5OGw9rdRNN7m9TZAIlevDXFjBUaKNvjB0B3yDkE; kqNd_2132_checkpm=1; kqNd_2132_sendmail=1
+

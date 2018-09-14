@@ -1,0 +1,9 @@
+GET /mall/?m=mall&c=goods&id=9043 HTTP/1.1
+Accept: image/gif, image/jpeg, image/pjpeg, image/pjpeg, application/x-shockwave-flash, application/x-ms-application, application/x-ms-xbap, application/vnd.ms-xpsdocument, application/xaml+xml, */*
+Accept-Language: zh-cn
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729)
+Accept-Encoding: gzip, deflate
+Host: my.nuaa.edu.cn
+Connection: Keep-Alive
+Cookie: kqNd_2132_sid=Qi4I76; myauth_uid=Ad2yQGwpLJSi%2FFsyBqabraq6RhACFToa6rGcFs7rtgIfxJgLHhURotdYm%2BgZH0CUDZSzRC35vdmDmp3IZHhj0s0%2BM6h2mgLhp321jJ%2FXEQwMoY7hRb3pQxyRM1O1JSx5X3Ryu25aFKxcmnYsw%2FG19wDYiGA8XQ9SfaoVLANs6t95ITuBZzmnQhiKVcA8RXUXBWqExMum7b5COmZzuVCVXLDYyHN0VVY%2Bm4xtg6KTNrcr2b587Qnn1T7%2FVTY2G6owyKmOWEg9GgKWhq4zBQw4JIj03gsYh8KKfxr71jXx1%2FntrInbk8NUGXGDDruDMQxv%2Fz72q%2FXLvkijIIk%2BR606HA%3D%3D; kqNd_2132_saltkey=G9u14R9f; kqNd_2132_lastvisit=1513735829; kqNd_2132_lastact=1513739760%09home.php%09spacecp; kqNd_2132_ulastactivity=866524YF9Y23mlRG9gwDE9PQYc7U79tHUzO2u75V%2FTXosV3xjuex; kqNd_2132_auth=a8e4XlRVpfDdt1KqQbzojlJoBZVALmzHgCieR6cBKbKYsY3m8K5LHV4v8mCzx2nDsLELBPpNQIv3NQD42q6x%2Bgpk2Ts; kqNd_2132_sendmail=1; kqNd_2132_checkpm=1; kqNd_2132_noticeTitle=1; kqNd_2132_nofavfid=1; kqNd_2132_visitedfid=201; kqNd_2132_smile=5D1; PHPSESSID=13jpta5rda9kvdq3edmjrini80
+

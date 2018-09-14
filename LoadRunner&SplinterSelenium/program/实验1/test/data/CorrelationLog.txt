@@ -1,0 +1,423 @@
+Debug Message:
+	Correlation engine instance created; using configuration Default
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/portal.php
+
+Debug Message:
+	TaskID=407  URL=http://my.nuaa.edu.cn/portal.php
+
+Debug Message:
+	Rules could not be applied to /template/newzfj/images/bgimg.jpg
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/portal.php
+
+Debug Message:
+	Rules could not be applied to /template/newzfj/images/toptb.png
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/portal.php
+
+Debug Message:
+	Rules could not be applied to /template/newzfj/images/search.png
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/portal.php
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/template/newzfj/images/none
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/portal.php
+
+Debug Message:
+	Rules could not be applied to /template/newzfj/images/weather.png
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/portal.php
+
+Debug Message:
+	Rules could not be applied to /template/newzfj/images/switch_style.png
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/portal.php
+
+Debug Message:
+	Rules could not be applied to /data/cache/common_extra.js?hkZ
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/portal.php
+
+Debug Message:
+	Rules could not be applied to /static/image/common/arrwd.gif
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/portal.php
+
+Debug Message:
+	Rules could not be applied to /static/image/common/user_online.gif
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/portal.php
+
+Debug Message:
+	Rules could not be applied to /template/newzfj/images/notice_pm.png
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/portal.php
+
+Debug Message:
+	Rules could not be applied to /template/newzfj/images/setup.png
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/portal.php
+
+Debug Message:
+	Rules could not be applied to /static/image/common/qmenu.png
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/portal.php
+
+Debug Message:
+	Rules could not be applied to /static/image/common/dot.gif
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/portal.php
+
+Debug Message:
+	Rules could not be applied to /template/newzfj/images/myrepeats.png
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/portal.php
+
+Debug Message:
+	Rules could not be applied to /template/newzfj/images/extra.png
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/portal.php
+
+Debug Message:
+	Rules could not be applied to /template/newzfj/images/logout.png
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/portal.php
+
+Debug Message:
+	Rules could not be applied to /static/image/common/ico_notice.png
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/portal.php
+
+Debug Message:
+	Rules could not be applied to /static/image/common/close.gif
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/portal.php
+
+Debug Message:
+	Rules could not be applied to /static/image/feed/mark_b.png
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/portal.php
+
+Debug Message:
+	Rules could not be applied to /static/image/feed/task_b.png
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/portal.php
+
+Debug Message:
+	Rules could not be applied to /static/image/feed/Qdao.png
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/portal.php
+
+Debug Message:
+	Rules could not be applied to /static/image/feed/magic_b.png
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/portal.php
+
+Debug Message:
+	Rules could not be applied to /static/image/feed/medal_b.png
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/portal.php
+
+Debug Message:
+	Rules could not be applied to /static/image/feed/friend_b.png
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/portal.php
+
+Debug Message:
+	Rules could not be applied to /static/image/feed/favorite_b.png
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/portal.php
+
+Debug Message:
+	Rules could not be applied to /static/image/common/scrolltop.png
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/portal.php
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/mall/
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/portal.php
+
+Debug Message:
+	TaskID=459  URL=http://my.nuaa.edu.cn/mall/
+
+Debug Message:
+	Rules could not be applied to Application/Common/Image/banner_repeat_mall.jpg
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/mall/
+
+Debug Message:
+	Rules could not be applied to Application/Common/Image/banner_mall.jpg
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/mall/
+
+Debug Message:
+	Rules could not be applied to Application/Common/Image/bg_mall.png
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/mall/
+
+Debug Message:
+	Rules could not be applied to Application/Common/Image/sold.png
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/mall/
+
+Debug Message:
+	Rules could not be applied to Application/Common/Image/logo.png
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/mall/
+
+Debug Message:
+	Rules could not be applied to Application/Common/Image/arrow.png
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/mall/
+
+Debug Message:
+	Rules could not be applied to Application/Common/Image/banner_center.png
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/mall/
+
+Debug Message:
+	Rules could not be applied to Application/Common/Image/want.png
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/mall/
+
+Debug Message:
+	Rules could not be applied to Application/Common/Image/sideToolbar.gif
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/mall/
+
+Debug Message:
+	Rules could not be applied to Application/Common/Image/page_left.png
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/mall/
+
+Debug Message:
+	Rules could not be applied to Application/Common/Image/circle.png
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/mall/
+
+Debug Message:
+	Rules could not be applied to Application/Common/Image/circle_right.png
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/mall/
+
+Debug Message:
+	Rules could not be applied to Application/Common/Image/page_right.png
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/mall/
+
+Debug Message:
+	Rules could not be applied to Application/Common/Image/dot.gif
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/mall/
+
+Debug Message:
+	Rules could not be applied to Application/Mall/Image/circle_hover.png
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/mall/
+
+Debug Message:
+	Rules could not be applied to ../favicon.ico
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/mall/?m=mall&a=search&search_content=吉他&search_type=0
+
+Debug Message:
+	TaskID=517  URL=http://my.nuaa.edu.cn/mall/?m=mall&a=search&search_content=吉他&search_type=0
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/mall/?m=mall&c=goods&id=9043
+
+Debug Message:
+	TaskID=526  URL=http://my.nuaa.edu.cn/mall/?m=mall&c=goods&id=9043
+
+Debug Message:
+	Rules could not be applied to Application/Common/Image/chu_tri.png
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/mall/?m=mall&c=goods&id=9043
+
+Debug Message:
+	Rules could not be applied to http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=420482
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/mall/?m=mall&c=goods&id=9043
+
+Debug Message:
+	Rules could not be applied to http://bdimg.share.baidu.com/static/api/js/view/share_view.js?v=3ae6026d.js
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/mall/?m=mall&c=goods&id=9043
+
+Debug Message:
+	Rules could not be applied to Uploads/2017-06-11/Cut_593d0c46e73a2.JPG
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/mall/?m=mall&c=goods&id=9043
+
+Debug Message:
+	Rules could not be applied to http://bdimg.share.baidu.com/static/api/js/share/select_api.js
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/mall/?m=mall&c=goods&id=9043
+
+Debug Message:
+	Rules could not be applied to http://bdimg.share.baidu.com/static/api/js/view/image_view.js
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/mall/?m=mall&c=goods&id=9043
+
+Debug Message:
+	Rules could not be applied to http://bdimg.share.baidu.com/static/api/js/share/share_api.js?v=226108fe.js
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/mall/?m=mall&c=goods&id=9043
+
+Debug Message:
+	Rules could not be applied to http://bdimg.share.baidu.com/static/api/js/share/image_api.js
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/mall/?m=mall&c=goods&id=9043
+
+Debug Message:
+	Rules could not be applied to http://bdimg.share.baidu.com/static/api/js/base/tangram.js?v=37768233.js
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/mall/?m=mall&c=goods&id=9043
+
+Debug Message:
+	Rules could not be applied to http://bdimg.share.baidu.com/static/api/js/view/select_view.js?v=85fc7cec.js
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/mall/?m=mall&c=goods&id=9043
+
+Debug Message:
+	Rules could not be applied to http://bdimg.share.baidu.com/static/api/js/share/api_base.js
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/mall/?m=mall&c=goods&id=9043
+
+Debug Message:
+	Rules could not be applied to http://bdimg.share.baidu.com/static/api/js/view/view_base.js
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/mall/?m=mall&c=goods&id=9043
+
+Debug Message:
+	Rules could not be applied to http://bdimg.share.baidu.com/static/api/js/component/partners.js?v=911c4302.js
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/mall/?m=mall&c=goods&id=9043
+
+Debug Message:
+	Rules could not be applied to http://bdimg.share.baidu.com/static/api/css/share_style0_16.css?v=6aba13f0.css
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/mall/?m=mall&c=goods&id=9043
+
+Debug Message:
+	Rules could not be applied to http://bdimg.share.baidu.com/static/api/img/share/icons_0_16.png?v=91362611.png
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/mall/?m=mall&c=goods&id=9043
+
+Debug Message:
+	Rules could not be applied to http://bdimg.share.baidu.com/static/api/js/trans/logger.js?v=d16ec0e3.js
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/mall/?m=mall&c=goods&id=9043
+
+Debug Message:
+	Rules could not be applied to http://nsclick.baidu.com/v.gif?pid=307&type=3071&sign=&desturl=&linkid=jbehig3ou2l&apitype=1
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/mall/?m=mall&c=goods&id=9043
+
+Debug Message:
+	Rules could not be applied to http://api.share.baidu.com/v.gif?l=http%3A%2F%2Fmy.nuaa.edu.cn%2Fmall%2F%3Fm%3Dmall%26c%3Dgoods%26id%3D9043
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/mall/?m=mall&c=goods&id=9043
+
+Debug Message:
+	Rules could not be applied to http://bdimg.share.baidu.com/static/api/css/share_popup.css?v=240f357d.css
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/mall/?m=mall&c=goods&id=9043
+
+Debug Message:
+	Rules could not be applied to http://bdimg.share.baidu.com/static/api/css/select_share.css?v=15f56735.css
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/mall/?m=mall&c=goods&id=9043
+
+Debug Message:
+	Rules could not be applied to http://bdimg.share.baidu.com/static/api/img/share/selectshare_close.png?v=1b34ee88.png
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/mall/?m=mall&c=goods&id=9043
+
+Debug Message:
+	Rules could not be applied to http://bdimg.share.baidu.com/static/api/img/share/share-search-icon.png
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/mall/?m=mall&c=goods&id=9043
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/mall/?m=mall&c=goods&a=talk_add
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/mall/?m=mall&c=goods&id=9043
+
+Debug Message:
+	Rules could not be applied to http://bdimg.share.baidu.com/static/api/js/component/anticheat.js?v=44b9b245.js
+
+Debug Message:
+	Rules could not be applied to http://my.nuaa.edu.cn/mall/?m=mall&c=goods&id=9043
+

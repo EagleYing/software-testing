@@ -1,0 +1,19 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Wed, 20 Dec 2017 07:35:30 GMT
+Content-Type: text/xml; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: kqNd_2132_lastact=1513755330%09forum.php%09viewthread; expires=Thu, 21-Dec-2017 07:35:30 GMT; Max-Age=86400; path=/
+Cache-Control: no-store, no-cache, must-revalidate
+Set-Cookie: kqNd_2132_st_p=539134%7C1513755330%7C2d0b9e8a662d925212015ed4058ebdc8; path=/
+Set-Cookie: kqNd_2132_viewid=tid_306828; path=/
+Expires: -1
+Cache-Control: no-store, private, post-check=0, pre-check=0, max-age=0
+Pragma: no-cache
+Set-Cookie: kqNd_2132_sid=U8jEiD; expires=Thu, 21-Dec-2017 07:35:30 GMT; Max-Age=86400; path=/
+Set-Cookie: kqNd_2132_auth=9538eeGd0Jb7EwwpJQAV%2F2wS%2BmsluSut0PONIjqAR31IrlpDxTPEVShemRhCBVmlzpqDP2L9Xkvrhw%2BUj01DXLyjZkk; expires=Thu, 04-Jan-2018 07:35:30 GMT; Max-Age=1296000; path=/; HttpOnly
+Set-Cookie: kqNd_2132_loginuser=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/
+Set-Cookie: kqNd_2132_activationauth=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/
+Set-Cookie: kqNd_2132_pmnum=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/
+

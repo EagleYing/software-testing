@@ -1,0 +1,64 @@
+Virtual User Script started at : 2017-12-20 15:30:45
+Starting action vuser_init.
+Web Turbo Replay of LoadRunner 11.0.0 for WINXP; build 8859 (Aug 18 2010 20:14:31)  	[MsgId: MMSG-27143]
+Run Mode: HTML  	[MsgId: MMSG-26000]
+Run-Time Settings file: "C:\Documents and Settings\eagle\My Documents\test\\default.cfg"  	[MsgId: MMSG-27141]
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Starting action Action.
+Action.c(4): web_add_cookie was successful  	[MsgId: MMSG-26392]
+Action.c(6): web_add_cookie was successful  	[MsgId: MMSG-26392]
+Action.c(8): web_add_cookie was successful  	[MsgId: MMSG-26392]
+Action.c(10): web_add_cookie was successful  	[MsgId: MMSG-26392]
+Action.c(12): web_add_cookie was successful  	[MsgId: MMSG-26392]
+Action.c(15): Found resource "http://my.nuaa.edu.cn/data/cache/style_11_common.css?hkZ" in HTML "http://my.nuaa.edu.cn/portal.php"  	[MsgId: MMSG-26659]
+Action.c(15): Found resource "http://my.nuaa.edu.cn/data/cache/common.js?hkZ" in HTML "http://my.nuaa.edu.cn/portal.php"  	[MsgId: MMSG-26659]
+Action.c(15): Found resource "http://my.nuaa.edu.cn/data/cache/portal.js?hkZ" in HTML "http://my.nuaa.edu.cn/portal.php"  	[MsgId: MMSG-26659]
+Action.c(15): Downloading resource "http://my.nuaa.edu.cn/template/newzfj/images/bgimg.jpg" (specified by argument number 9)  	[MsgId: MMSG-26577]
+Action.c(15): Downloading resource "http://my.nuaa.edu.cn/template/newzfj/images/toptb.png" (specified by argument number 11)  	[MsgId: MMSG-26577]
+Action.c(15): Downloading resource "http://my.nuaa.edu.cn/template/newzfj/images/search.png" (specified by argument number 13)  	[MsgId: MMSG-26577]
+Action.c(15): Downloading resource "http://my.nuaa.edu.cn/static/image/common/px.png" (specified by argument number 15)  	[MsgId: MMSG-26577]
+Action.c(15): Downloading resource "http://my.nuaa.edu.cn/static/image/common/newarow.gif" (specified by argument number 17)  	[MsgId: MMSG-26577]
+Action.c(15): Downloading resource "http://my.nuaa.edu.cn/template/newzfj/images/weather.png" (specified by argument number 19)  	[MsgId: MMSG-26577]
+Action.c(15): Downloading resource "http://my.nuaa.edu.cn/static/image/common/qmenu.png" (specified by argument number 21)  	[MsgId: MMSG-26577]
+Action.c(15): Downloading resource "http://my.nuaa.edu.cn/data/cache/common_extra.js?hkZ" (specified by argument number 23)  	[MsgId: MMSG-26577]
+Action.c(15): Downloading resource "http://my.nuaa.edu.cn/static/image/common/dot.gif" (specified by argument number 25)  	[MsgId: MMSG-26577]
+Action.c(15): Downloading resource "http://my.nuaa.edu.cn/static/image/common/scrolltop.png" (specified by argument number 27)  	[MsgId: MMSG-26577]
+Action.c(15): Found resource "http://my.nuaa.edu.cn/template/newzfj/images/logo.png" in HTML "http://my.nuaa.edu.cn/portal.php"  	[MsgId: MMSG-26659]
+Action.c(15): Found resource "http://my.nuaa.edu.cn/data/cache/logging.js?hkZ" in HTML "http://my.nuaa.edu.cn/portal.php"  	[MsgId: MMSG-26659]
+Action.c(15): Found resource "http://my.nuaa.edu.cn/data/cache/md5.js?hkZ" in HTML "http://my.nuaa.edu.cn/portal.php"  	[MsgId: MMSG-26659]
+Action.c(15): Found resource "http://my.nuaa.edu.cn/data/attachment/block/c3/c3fab4648a1aba7ca4579001dbc555c5.jpg" in HTML "http://my.nuaa.edu.cn/portal.php"  	[MsgId: MMSG-26659]
+Action.c(15): Found resource "http://my.nuaa.edu.cn/data/attachment/block/6a/6a6fd169ce3ffde1046bda470b22af96.jpg" in HTML "http://my.nuaa.edu.cn/portal.php"  	[MsgId: MMSG-26659]
+Action.c(15): Found resource "http://my.nuaa.edu.cn/source/plugin/emoji_support/emoji.css" in HTML "http://my.nuaa.edu.cn/portal.php"  	[MsgId: MMSG-26659]
+Action.c(15): Found resource "http://my.nuaa.edu.cn/source/plugin/emoji_support/emoji.js" in HTML "http://my.nuaa.edu.cn/portal.php"  	[MsgId: MMSG-26659]
+Action.c(15): Found resource "https://dn-oneapm.qbox.me/badge2xwhite.png" in HTML "http://my.nuaa.edu.cn/portal.php"  	[MsgId: MMSG-26659]
+Action.c(15): web_url("portal.php") was successful, 287442 body bytes, 6900 header bytes, 210 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.c(35): Downloading resource "http://my.nuaa.edu.cn/favicon.ico" (specified by argument number 8)  	[MsgId: MMSG-26577]
+Action.c(35): web_url("none") was successful, 16958 body bytes, 464 header bytes  	[MsgId: MMSG-26386]
+Action.c(45): Found resource "http://my.nuaa.edu.cn/sso/resources/css/main.css" in HTML "http://my.nuaa.edu.cn/sso/?page=login&redirect_uri=L3BsdWdpbi5waHA/aWQ9c3lubG9naW46bG9naW5jaGVjayZyZWRpcmVjdF91cmk9TDNCdmNuUmhiQzV3YUhBPQ=="  	[MsgId: MMSG-26659]
+Action.c(45): Found resource "http://my.nuaa.edu.cn/lib/mui/css/mui.min.css" in HTML "http://my.nuaa.edu.cn/sso/?page=login&redirect_uri=L3BsdWdpbi5waHA/aWQ9c3lubG9naW46bG9naW5jaGVjayZyZWRpcmVjdF91cmk9TDNCdmNuUmhiQzV3YUhBPQ=="  	[MsgId: MMSG-26659]
+Action.c(45): Found resource "http://my.nuaa.edu.cn/sso/resources/js/my_encrypt.js" in HTML "http://my.nuaa.edu.cn/sso/?page=login&redirect_uri=L3BsdWdpbi5waHA/aWQ9c3lubG9naW46bG9naW5jaGVjayZyZWRpcmVjdF91cmk9TDNCdmNuUmhiQzV3YUhBPQ=="  	[MsgId: MMSG-26659]
+Action.c(45): Found resource "http://my.nuaa.edu.cn/sso/resources/img/logo.png" in HTML "http://my.nuaa.edu.cn/sso/?page=login&redirect_uri=L3BsdWdpbi5waHA/aWQ9c3lubG9naW46bG9naW5jaGVjayZyZWRpcmVjdF91cmk9TDNCdmNuUmhiQzV3YUhBPQ=="  	[MsgId: MMSG-26659]
+Action.c(45): Found resource "http://my.nuaa.edu.cn/mytools/?tool=qrcode&text=wechat://c48e5d987ef8471faa908b31f651d1b235ef4b27" in HTML "http://my.nuaa.edu.cn/sso/?page=login&redirect_uri=L3BsdWdpbi5waHA/aWQ9c3lubG9naW46bG9naW5jaGVjayZyZWRpcmVjdF91cmk9TDNCdmNuUmhiQzV3YUhBPQ=="  	[MsgId: MMSG-26659]
+Action.c(45): Found resource "http://my.nuaa.edu.cn/sso/resources/js/wechat_query.js" in HTML "http://my.nuaa.edu.cn/sso/?page=login&redirect_uri=L3BsdWdpbi5waHA/aWQ9c3lubG9naW46bG9naW5jaGVjayZyZWRpcmVjdF91cmk9TDNCdmNuUmhiQzV3YUhBPQ=="  	[MsgId: MMSG-26659]
+Action.c(45): Found resource "http://my.nuaa.edu.cn/lib/mui/js/mui.min.js" in HTML "http://my.nuaa.edu.cn/sso/?page=login&redirect_uri=L3BsdWdpbi5waHA/aWQ9c3lubG9naW46bG9naW5jaGVjayZyZWRpcmVjdF91cmk9TDNCdmNuUmhiQzV3YUhBPQ=="  	[MsgId: MMSG-26659]
+Action.c(45): Found resource "http://my.nuaa.edu.cn/sso/resources/js/main.js" in HTML "http://my.nuaa.edu.cn/sso/?page=login&redirect_uri=L3BsdWdpbi5waHA/aWQ9c3lubG9naW46bG9naW5jaGVjayZyZWRpcmVjdF91cmk9TDNCdmNuUmhiQzV3YUhBPQ=="  	[MsgId: MMSG-26659]
+Action.c(45): Downloading resource "http://my.nuaa.edu.cn/sso/resources/js/base64.js" (specified by argument number 9)  	[MsgId: MMSG-26577]
+Action.c(45): Downloading resource "http://my.nuaa.edu.cn/sso/resources/js/ieBetter.js" (specified by argument number 12)  	[MsgId: MMSG-26577]
+Action.c(45): Downloading resource "http://my.nuaa.edu.cn/sso/resources/js/html5.js" (specified by argument number 15)  	[MsgId: MMSG-26577]
+Action.c(45): Downloading resource "http://my.nuaa.edu.cn/sso/resources/js/classList.min.js" (specified by argument number 18)  	[MsgId: MMSG-26577]
+Action.c(45): Downloading resource "http://my.nuaa.edu.cn/template/zfj4.0/images/bg.png" (specified by argument number 21)  	[MsgId: MMSG-26577]
+Action.c(45): web_url("sso") was successful, 117455 body bytes, 3464 header bytes, 189 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.c(62): Notify: Transaction "login" started.
+Action.c(64): Rendezvous login
+Action.c(65): Submitting form to "http://my.nuaa.edu.cn/sso/?page=login&redirect_uri=L3BsdWdpbi5waHA/aWQ9c3lubG9naW46bG9naW5jaGVjayZyZWRpcmVjdF91cmk9TDNCdmNuUmhiQzV3YUhBPQ==", Target Frame=""  	[MsgId: MMSG-27978]
+Action.c(65): web_submit_form("sso_2") was successful, 118 body bytes, 749 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.c(73): Verification checks not enabled. web_find is skipped. See the 'Run-time settings/Preferences/Checks'  	[MsgId: MMSG-27197]
+Action.c(73): web_find was successful  	[MsgId: MMSG-26392]
+Action.c(76): Notify: Transaction "login" ended with "Stop" status (Duration: 111.4707 Wasted Time: 0.0031).
+Abort was called from an action.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.

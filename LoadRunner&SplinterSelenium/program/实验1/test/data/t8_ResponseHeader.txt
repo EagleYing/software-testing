@@ -1,0 +1,12 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Wed, 20 Dec 2017 03:12:08 GMT
+Content-Type: text/xml; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: kqNd_2132_lastact=1513739528%09forum.php%09ajax; expires=Thu, 21-Dec-2017 03:12:08 GMT; Max-Age=86400; path=/
+Cache-Control: no-store, no-cache, must-revalidate
+Expires: -1
+Cache-Control: no-store, private, post-check=0, pre-check=0, max-age=0
+Pragma: no-cache
+

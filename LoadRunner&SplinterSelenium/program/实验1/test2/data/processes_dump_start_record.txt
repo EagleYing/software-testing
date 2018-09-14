@@ -1,0 +1,25 @@
+Failed to get information of process Id: 0
+Failed to get information of process Id: 4
+PROCESS 0x170       smss.exe
+Failed to get information of process Id: 592
+PROCESS 0x268       winlogon.exe
+PROCESS 0x294       services.exe
+PROCESS 0x2a0       lsass.exe
+PROCESS 0x340       vboxservice.exe
+PROCESS 0x36c       svchost.exe
+Failed to get information of process Id: 960
+PROCESS 0x41c       svchost.exe
+Failed to get information of process Id: 1100
+Failed to get information of process Id: 1252
+PROCESS 0x618       spoolsv.exe
+PROCESS 0x620       explorer.exe
+PROCESS 0x6dc       vboxtray.exe
+PROCESS 0x6e4       ctfmon.exe
+PROCESS 0x6f0       magentproc.exe
+Failed to get information of process Id: 256
+Failed to get information of process Id: 1844
+PROCESS 0x7fc       wscntfy.exe
+PROCESS 0xac        vugen.exe
+PROCESS 0x198       conime.exe
+PROCESS 0x74c       iexplore.exe
+PROCESS 0xb3c       iexplore.exe

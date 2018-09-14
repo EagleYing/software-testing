@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-IC:\Documents and Settings\eagle\My Documents\test
+-IC:\Program Files\HP\LoadRunner\include
+-ec:\documents and settings\eagle\my documents\test\\logfile.log
+c:\documents and settings\eagle\my documents\test\\combined_test.c
+c:\documents and settings\eagle\my documents\test\\pre_cci.c

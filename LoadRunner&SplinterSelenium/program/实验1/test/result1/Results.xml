@@ -1,0 +1,691 @@
+﻿<?xml version="1.0"?>
+  <!DOCTYPE Report
+[
+<!ELEMENT Report (General ,(Doc|BPT)) >
+<!ATTLIST Report ver CDATA #REQUIRED tmZone CDATA #REQUIRED>
+
+<!ELEMENT General ( DocLocation ) >
+<!ATTLIST General productName CDATA #REQUIRED productVer CDATA #REQUIRED os CDATA #REQUIRED host CDATA #REQUIRED>
+
+<!ELEMENT BPT (DName,Res,DVer?,TSet?,TInst?,NodeArgs,Doc*) >
+<!ATTLIST BPT rID ID #REQUIRED >
+
+<!ELEMENT Doc (DName, Res, DVer?, TSet?, TInst?, RunType?, DT?, Step*, Action+, DIter*, Action*, Summary?, NodeArgs?)> 
+<!ATTLIST Doc rID ID #REQUIRED type (Test|BC) "Test" productName CDATA #REQUIRED BCIter CDATA #IMPLIED >
+
+<!ELEMENT RunType ( #PCDATA )>
+<!ATTLIST RunType fmStep (False|True) "False" batch (False|True) "False" upDesc (False|True) "False" upChk (False|True) "False" upAS (False|True) "False">
+
+<!ELEMENT DName ( #PCDATA ) >
+
+<!ELEMENT Res ( #PCDATA ) >
+
+<!ELEMENT DVer ( #PCDATA ) >
+
+<!ELEMENT TSet ( #PCDATA ) >
+
+<!ELEMENT TInst ( #PCDATA ) >
+
+<!ELEMENT DIter (Step?,Action+,Summary?,NodeArgs)>
+<!ATTLIST DIter rID ID #REQUIRED iterID CDATA #REQUIRED>
+
+<!ELEMENT DocLocation ( #PCDATA )>
+
+<!ELEMENT Action (AName,AIter*,(Step|HtmlStep|Action)*,Summary,NodeArgs) >
+<!ATTLIST Action rID ID #REQUIRED>
+
+<!ELEMENT AIter ((Step|HtmlStep|Action)*,Summary?,NodeArgs) >
+<!ATTLIST AIter rID ID #REQUIRED iterID CDATA #REQUIRED>
+
+<!ELEMENT AName ( #PCDATA ) >
+
+<!ELEMENT Step (Obj,Details,Time,(Step|HtmlStep|Doc)*,NodeArgs) >
+<!ATTLIST Step rID ID #REQUIRED retval CDATA #IMPLIED>
+
+<!ELEMENT HtmlStep (HTML,(Step|HtmlStep|Doc)*,NodeArgs) >
+<!ATTLIST HtmlStep rID ID #REQUIRED >
+
+<!ELEMENT Obj ( #PCDATA ) >
+<!ATTLIST Obj plainTxt (False|True) "True">
+
+<!ELEMENT Details ( #PCDATA ) >
+<!ATTLIST Details plainTxt (False|True) "True">
+
+<!ELEMENT Time ( #PCDATA ) >
+
+<!ELEMENT HTML ( #PCDATA ) >
+
+<!ELEMENT Disp ( #PCDATA ) >
+
+<!ELEMENT NodeArgs (Disp,TopPane?,BtmPane?)>
+<!ATTLIST NodeArgs eType CDATA #REQUIRED icon CDATA #REQUIRED nRep CDATA #REQUIRED filter (False|True) "True">
+<!ATTLIST NodeArgs status (Passed|Failed|Done|Warning|Information) "Done">
+<!ATTLIST NodeArgs iconSel CDATA #IMPLIED nType CDATA #IMPLIED >
+
+<!ELEMENT TopPane (Path)>
+
+<!ELEMENT BtmPane ( (Path|WR)?,ASHilite?)>
+<!ATTLIST BtmPane vType CDATA "HTML">
+
+<!ELEMENT Path ( #PCDATA ) >
+
+<!ELEMENT ASHilite ( #PCDATA ) >
+
+<!ELEMENT WR ( #PCDATA ) >
+
+<!ELEMENT DT (NodeArgs) >
+<!ATTLIST DT rID ID #REQUIRED>
+
+<!ELEMENT Summary (Param*)>
+<!ATTLIST Summary sTime CDATA #IMPLIED eTime CDATA #IMPLIED passed CDATA #IMPLIED failed CDATA #IMPLIED warnings CDATA #IMPLIED retval CDATA #IMPLIED stopped (False|True) "False" >
+
+<!ELEMENT Param (ParamName,ParamVal)+ >
+<!ATTLIST Param paramInOut (In|Out) "In">
+
+<!ELEMENT ParamName ( #PCDATA ) >
+
+<!ELEMENT ParamVal ( #PCDATA ) >
+
+]
+> <Report ver="2.0" tmZone="中国标准时间">
+<General productName="Vugen" productVer="11" os="" host="NUAA-6ACA4996A4"><DocLocation><![CDATA[C:\Documents and Settings\eagle\My Documents\test]]></DocLocation></General>
+<Doc rID="T1"   productName= "Vugen"  >
+<DName><![CDATA[test]]></DName>
+<Res><![CDATA[result1]]></Res>
+<Action rID="T2">
+<AName><![CDATA[vuser_init]]></AName>
+<Summary sTime="2017-12-20 - 15:32:59" eTime="2017-12-20 - 15:32:59" passed="0" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="5" >
+<Disp><![CDATA[vuser_init Summary]]></Disp>
+</NodeArgs>
+</Action>
+<DIter rID="T3" iterID="1" >
+<Action rID="T4">
+<AName><![CDATA[Action]]></AName>
+<Step rID="T5">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>kqNd_2132_sid=Qi4I76; DOMAIN=my.nuaa.edu.cn</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:32:59]]></Time>
+<NodeArgs eType="General" icon="4" nRep="9" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T6">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>kqNd_2132_saltkey=gYb7KlyQ; DOMAIN=my.nuaa.edu.cn</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:32:59]]></Time>
+<NodeArgs eType="General" icon="4" nRep="10" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T7">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>kqNd_2132_lastvisit=1513735775; DOMAIN=my.nuaa.edu.cn</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:32:59]]></Time>
+<NodeArgs eType="General" icon="4" nRep="11" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T8">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>kqNd_2132_lastact=1513739375%09home.php%09misc; DOMAIN=my.nuaa.edu.cn</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:32:59]]></Time>
+<NodeArgs eType="General" icon="4" nRep="12" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T9">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>kqNd_2132_sendmail=1; DOMAIN=my.nuaa.edu.cn</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:32:59]]></Time>
+<NodeArgs eType="General" icon="4" nRep="13" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T10">
+<Obj plainTxt="False" ><![CDATA[Url: portal.php]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:01]]></Time>
+<NodeArgs eType="General" icon="5" nRep="14" status="Passed" >
+<Disp><![CDATA[Url: portal.php]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t1.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T11">
+<Obj plainTxt="False" ><![CDATA[Url: none]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:01]]></Time>
+<NodeArgs eType="General" icon="5" nRep="15" status="Passed" >
+<Disp><![CDATA[Url: none]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t2.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T12">
+<Obj plainTxt="False" ><![CDATA[Url: sso]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:01]]></Time>
+<NodeArgs eType="General" icon="5" nRep="16" status="Passed" >
+<Disp><![CDATA[Url: sso]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t3.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T13">
+<Obj plainTxt="False" ><![CDATA[Submit Form: sso_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:01]]></Time>
+<NodeArgs eType="General" icon="6" nRep="17" status="Passed" >
+<Disp><![CDATA[Submit Form: sso_2]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t4.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T14">
+<Obj plainTxt="False" ><![CDATA[Submit Form: sso_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>[param not passed in call]</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:01]]></Time>
+<NodeArgs eType="General" icon="6" nRep="18" >
+<Disp><![CDATA[Submit Form: sso_2]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T15">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>kqNd_2132_lastact=1513739429%09portal.php%09; DOMAIN=my.nuaa.edu.cn</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:01]]></Time>
+<NodeArgs eType="General" icon="4" nRep="19" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T16">
+<Obj plainTxt="False" ><![CDATA[Url: plugin.php]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:02]]></Time>
+<NodeArgs eType="General" icon="5" nRep="20" status="Passed" >
+<Disp><![CDATA[Url: plugin.php]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t5.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T17">
+<Obj plainTxt="False" ><![CDATA[Url: none_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:02]]></Time>
+<NodeArgs eType="General" icon="5" nRep="21" status="Passed" >
+<Disp><![CDATA[Url: none_2]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t6.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="2017-12-20 - 15:32:59" eTime="2017-12-20 - 15:33:02" passed="6" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="8" status="Passed" >
+<Disp><![CDATA[Action Summary]]></Disp>
+</NodeArgs>
+</Action>
+<Action rID="T18">
+<AName><![CDATA[Action2]]></AName>
+<Step rID="T19">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>kqNd_2132_sid=Qi4I76; DOMAIN=my.nuaa.edu.cn</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:02]]></Time>
+<NodeArgs eType="General" icon="4" nRep="24" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T20">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>myauth_uid=Ad2yQGwpLJSi%2FFsyBqabraq6RhACFToa6rGcFs7rtgIfxJgLHhURotdYm%2BgZH0CUDZSzRC35vdmDmp3IZHhj0s0%2BM6h2mgLhp321jJ%2FXEQwMoY7hRb3pQxyRM1O1JSx5X3Ryu25aFKxcmnYsw%2FG19wDYiGA8XQ9SfaoVLANs6t95ITuBZzmnQhiKVcA8RXUXBWqExMum7b5COmZzuVCVXLDYyHN0VVY%2Bm4xtg6KTNrcr2b587Qnn1T7%2FVTY2G6owyKmOWEg9GgKWhq4zBQw4JIj03gsYh8KKfxr71jXx1%2FntrInbk8NUGXGDDruDMQxv%2Fz72q%2FXLvkijIIk%2BR606HA%3D%3D; DOMAIN=my.nuaa.edu.cn</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:02]]></Time>
+<NodeArgs eType="General" icon="4" nRep="25" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T21">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>kqNd_2132_saltkey=G9u14R9f; DOMAIN=my.nuaa.edu.cn</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:02]]></Time>
+<NodeArgs eType="General" icon="4" nRep="26" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T22">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>kqNd_2132_lastvisit=1513735829; DOMAIN=my.nuaa.edu.cn</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:02]]></Time>
+<NodeArgs eType="General" icon="4" nRep="27" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T23">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>kqNd_2132_lastact=1513739430%09home.php%09spacecp; DOMAIN=my.nuaa.edu.cn</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:02]]></Time>
+<NodeArgs eType="General" icon="4" nRep="28" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T24">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>kqNd_2132_ulastactivity=866524YF9Y23mlRG9gwDE9PQYc7U79tHUzO2u75V%2FTXosV3xjuex; DOMAIN=my.nuaa.edu.cn</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:02]]></Time>
+<NodeArgs eType="General" icon="4" nRep="29" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T25">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>kqNd_2132_auth=fc3bDj%2B%2BNNVCqLB5%2FVr05Tuqsk%2FO%2FFT5IG0HU%2FdlxaI6OKD%2BwMZ77eFTX%2FyVWidSJ7vRsVohxDlnxRv4A5zOE1sS7%2Bo; DOMAIN=my.nuaa.edu.cn</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:02]]></Time>
+<NodeArgs eType="General" icon="4" nRep="30" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T26">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>kqNd_2132_sendmail=1; DOMAIN=my.nuaa.edu.cn</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:02]]></Time>
+<NodeArgs eType="General" icon="4" nRep="31" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T27">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>kqNd_2132_checkpm=1; DOMAIN=my.nuaa.edu.cn</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:02]]></Time>
+<NodeArgs eType="General" icon="4" nRep="32" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T28">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>kqNd_2132_noticeTitle=1; DOMAIN=my.nuaa.edu.cn</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:02]]></Time>
+<NodeArgs eType="General" icon="4" nRep="33" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T29">
+<Obj plainTxt="False" ><![CDATA[Url: portal.php]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:02]]></Time>
+<NodeArgs eType="General" icon="5" nRep="34" status="Passed" >
+<Disp><![CDATA[Url: portal.php]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t7.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T30">
+<Obj plainTxt="False" ><![CDATA[Url: none]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:03]]></Time>
+<NodeArgs eType="General" icon="5" nRep="35" status="Passed" >
+<Disp><![CDATA[Url: none]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t8.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T31">
+<Obj plainTxt="False" ><![CDATA[Url: forum.php]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:03]]></Time>
+<NodeArgs eType="General" icon="5" nRep="36" status="Passed" >
+<Disp><![CDATA[Url: forum.php]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t9.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T32">
+<Obj plainTxt="False" ><![CDATA[Url: none_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:03]]></Time>
+<NodeArgs eType="General" icon="5" nRep="37" status="Passed" >
+<Disp><![CDATA[Url: none_2]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t10.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T33">
+<Obj plainTxt="False" ><![CDATA[Url: forum.php_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:10]]></Time>
+<NodeArgs eType="General" icon="5" nRep="38" status="Passed" >
+<Disp><![CDATA[Url: forum.php_2]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t11.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T34">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>kqNd_2132_smile=5D1; DOMAIN=my.nuaa.edu.cn</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:10]]></Time>
+<NodeArgs eType="General" icon="4" nRep="39" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T35">
+<Obj plainTxt="False" ><![CDATA[Url: none_3]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:11]]></Time>
+<NodeArgs eType="General" icon="5" nRep="40" status="Passed" >
+<Disp><![CDATA[Url: none_3]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t12.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T36">
+<Obj plainTxt="False" ><![CDATA[Url: forum.php_3]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:11]]></Time>
+<NodeArgs eType="General" icon="5" nRep="41" status="Passed" >
+<Disp><![CDATA[Url: forum.php_3]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t13.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T37">
+<Obj plainTxt="False" ><![CDATA[Submit Data: forum.php_4]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:12]]></Time>
+<NodeArgs eType="General" icon="7" nRep="42" status="Passed" >
+<Disp><![CDATA[Submit Data: forum.php_4]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t14.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T38">
+<Obj plainTxt="False" ><![CDATA[Url: forum.php_5]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:12]]></Time>
+<NodeArgs eType="General" icon="5" nRep="43" status="Passed" >
+<Disp><![CDATA[Url: forum.php_5]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t15.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="2017-12-20 - 15:33:02" eTime="2017-12-20 - 15:33:12" passed="9" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="23" status="Passed" >
+<Disp><![CDATA[Action2 Summary]]></Disp>
+</NodeArgs>
+</Action>
+<Action rID="T39">
+<AName><![CDATA[Action3]]></AName>
+<Step rID="T40">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>kqNd_2132_sid=Qi4I76; DOMAIN=my.nuaa.edu.cn</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:12]]></Time>
+<NodeArgs eType="General" icon="4" nRep="46" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T41">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>myauth_uid=Ad2yQGwpLJSi%2FFsyBqabraq6RhACFToa6rGcFs7rtgIfxJgLHhURotdYm%2BgZH0CUDZSzRC35vdmDmp3IZHhj0s0%2BM6h2mgLhp321jJ%2FXEQwMoY7hRb3pQxyRM1O1JSx5X3Ryu25aFKxcmnYsw%2FG19wDYiGA8XQ9SfaoVLANs6t95ITuBZzmnQhiKVcA8RXUXBWqExMum7b5COmZzuVCVXLDYyHN0VVY%2Bm4xtg6KTNrcr2b587Qnn1T7%2FVTY2G6owyKmOWEg9GgKWhq4zBQw4JIj03gsYh8KKfxr71jXx1%2FntrInbk8NUGXGDDruDMQxv%2Fz72q%2FXLvkijIIk%2BR606HA%3D%3D; DOMAIN=my.nuaa.edu.cn</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:12]]></Time>
+<NodeArgs eType="General" icon="4" nRep="47" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T42">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>kqNd_2132_saltkey=G9u14R9f; DOMAIN=my.nuaa.edu.cn</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:12]]></Time>
+<NodeArgs eType="General" icon="4" nRep="48" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T43">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>kqNd_2132_lastvisit=1513735829; DOMAIN=my.nuaa.edu.cn</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:12]]></Time>
+<NodeArgs eType="General" icon="4" nRep="49" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T44">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>kqNd_2132_lastact=1513739529%09forum.php%09viewthread; DOMAIN=my.nuaa.edu.cn</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:12]]></Time>
+<NodeArgs eType="General" icon="4" nRep="50" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T45">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>kqNd_2132_ulastactivity=866524YF9Y23mlRG9gwDE9PQYc7U79tHUzO2u75V%2FTXosV3xjuex; DOMAIN=my.nuaa.edu.cn</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:12]]></Time>
+<NodeArgs eType="General" icon="4" nRep="51" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T46">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>kqNd_2132_auth=83d9rx9HlU4amCWITEKAYUv1Zgnu6LDhW%2B2yWZaH%2B%2Ft3dy%2FmdaSSEwhqNYblT17D63z2YFdFsAzoH0ZLbvzoBojHDSg; DOMAIN=my.nuaa.edu.cn</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:12]]></Time>
+<NodeArgs eType="General" icon="4" nRep="52" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T47">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>kqNd_2132_sendmail=1; DOMAIN=my.nuaa.edu.cn</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:12]]></Time>
+<NodeArgs eType="General" icon="4" nRep="53" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T48">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>kqNd_2132_noticeTitle=1; DOMAIN=my.nuaa.edu.cn</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:12]]></Time>
+<NodeArgs eType="General" icon="4" nRep="54" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T49">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>kqNd_2132_nofavfid=1; DOMAIN=my.nuaa.edu.cn</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:12]]></Time>
+<NodeArgs eType="General" icon="4" nRep="55" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T50">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>kqNd_2132_visitedfid=201; DOMAIN=my.nuaa.edu.cn</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:12]]></Time>
+<NodeArgs eType="General" icon="4" nRep="56" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T51">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>kqNd_2132_smile=5D1; DOMAIN=my.nuaa.edu.cn</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:12]]></Time>
+<NodeArgs eType="General" icon="4" nRep="57" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T52">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>kqNd_2132_lastact=1513739758%09portal.php%09; DOMAIN=my.nuaa.edu.cn</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:12]]></Time>
+<NodeArgs eType="General" icon="4" nRep="58" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T53">
+<Obj plainTxt="False" ><![CDATA[Url: portal.php]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:12]]></Time>
+<NodeArgs eType="General" icon="5" nRep="59" status="Passed" >
+<Disp><![CDATA[Url: portal.php]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t16.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T54">
+<Obj plainTxt="False" ><![CDATA[Url: none]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:12]]></Time>
+<NodeArgs eType="General" icon="5" nRep="60" status="Passed" >
+<Disp><![CDATA[Url: none]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t17.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T55">
+<Obj plainTxt="False" ><![CDATA[Url: mall]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:14]]></Time>
+<NodeArgs eType="General" icon="5" nRep="61" status="Passed" >
+<Disp><![CDATA[Url: mall]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t18.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T56">
+<Obj plainTxt="False" ><![CDATA[Url: mall_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:15]]></Time>
+<NodeArgs eType="General" icon="5" nRep="62" status="Passed" >
+<Disp><![CDATA[Url: mall_2]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t19.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T57">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>BAIDUID=340F75483FB7F2D59B9BF16012C54FE5:FG=1; DOMAIN=bdimg.share.baidu.com</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:15]]></Time>
+<NodeArgs eType="General" icon="4" nRep="63" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T58">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>BIDUPSID=340F75483FB7F2D59B9BF16012C54FE5; DOMAIN=bdimg.share.baidu.com</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:15]]></Time>
+<NodeArgs eType="General" icon="4" nRep="64" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T59">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>PSTM=1506177343; DOMAIN=bdimg.share.baidu.com</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:15]]></Time>
+<NodeArgs eType="General" icon="4" nRep="65" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T60">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>BAIDUID=340F75483FB7F2D59B9BF16012C54FE5:FG=1; DOMAIN=nsclick.baidu.com</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:15]]></Time>
+<NodeArgs eType="General" icon="4" nRep="66" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T61">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>BIDUPSID=340F75483FB7F2D59B9BF16012C54FE5; DOMAIN=nsclick.baidu.com</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:15]]></Time>
+<NodeArgs eType="General" icon="4" nRep="67" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T62">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>PSTM=1506177343; DOMAIN=nsclick.baidu.com</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:15]]></Time>
+<NodeArgs eType="General" icon="4" nRep="68" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T63">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>BAIDUID=340F75483FB7F2D59B9BF16012C54FE5:FG=1; DOMAIN=api.share.baidu.com</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:15]]></Time>
+<NodeArgs eType="General" icon="4" nRep="69" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T64">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>BIDUPSID=340F75483FB7F2D59B9BF16012C54FE5; DOMAIN=api.share.baidu.com</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:15]]></Time>
+<NodeArgs eType="General" icon="4" nRep="70" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T65">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>PSTM=1506177343; DOMAIN=api.share.baidu.com</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:15]]></Time>
+<NodeArgs eType="General" icon="4" nRep="71" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T66">
+<Obj plainTxt="False" ><![CDATA[Url: mall_3]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:16]]></Time>
+<NodeArgs eType="General" icon="5" nRep="72" status="Passed" >
+<Disp><![CDATA[Url: mall_3]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t20.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T67">
+<Obj plainTxt="False" ><![CDATA[Submit Data: mall_4]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2017-12-20 - 15:33:16]]></Time>
+<NodeArgs eType="General" icon="7" nRep="73" status="Passed" >
+<Disp><![CDATA[Submit Data: mall_4]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t21.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="2017-12-20 - 15:33:12" eTime="2017-12-20 - 15:33:16" passed="6" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="45" status="Passed" >
+<Disp><![CDATA[Action3 Summary]]></Disp>
+</NodeArgs>
+</Action>
+<NodeArgs eType="StartIteration" icon="3" nRep="7" status="Passed" >
+<Disp><![CDATA[test Iteration 1 (Row 1)]]></Disp>
+</NodeArgs>
+</DIter>
+<Action rID="T68">
+<AName><![CDATA[vuser_end]]></AName>
+<Summary sTime="2017-12-20 - 15:33:16" eTime="2017-12-20 - 15:33:16" passed="0" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="76" >
+<Disp><![CDATA[vuser_end Summary]]></Disp>
+</NodeArgs>
+</Action>
+<Summary sTime="2017-12-20 - 15:32:59" eTime="2017-12-20 - 15:33:16" passed="21" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartTest" icon="1" nRep="4" status="Passed" >
+<Disp><![CDATA[Test test Summary]]></Disp>
+</NodeArgs>
+</Doc>
+</Report>

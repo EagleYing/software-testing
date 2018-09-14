@@ -1,0 +1,834 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>集市 - 南航mall</title>
+	<link rel="stylesheet" type="text/css" href="./Application/Common/Css/common.css">
+	<script type="text/javascript" src="./Application/Common/Js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="./Application/Common/Js/page.js"></script>
+	<script type="text/javascript" src="./Application/Common/Noty/js/noty/packaged/jquery.noty.packaged.min.js"></script>
+	<script type="text/javascript" src="./Application/Common/Js/collect.js"></script>
+	<script type="text/javascript">
+		var page="mall";
+		var page_this=1;
+	</script>
+</head>
+<body>
+	<!--[if IE 7]>
+	<style>
+		.banner_left{	margin-left:-684px;}
+		.panel-left	{	min-height:800px;}
+		.mes_line {border-bottom: 1px dotted grey;padding-bottom: 0px;padding-top: 0px;line-height:50px;}
+		#caozuo_area {margin-top:150px;}
+	</style>
+	<![endif]-->
+<div class="header_top">
+	<div>
+		<div class="fl">
+			<a href="/portal.php">门户</a>
+			<a href="/forum.php">论坛</a>
+			<a href="/mall">商城</a>
+			<a href="/wiki">百科</a>
+			<!-- <a href="/zhidao">知道</a> -->
+			<!-- <a href="/wenku">文库</a> -->
+		</div>
+		<div class="fr">
+									<a href='?m=home&lb=4'>我的收藏</a>
+			<a href='?m=home&lb=2'>我的东西</a>
+			<span>|</span>
+			<a href='?m=home&lb=1'>
+			<span>提醒</span>			</a><span>|</span>
+			<a href="?m=home&lb=1">ha ha</a>
+			<a href="/sso/?action=logout&redirect_uri=L21hbGwv">注销</a>		</div>
+	</div>
+</div>
+<div class="header_center">
+	<div class="set_width">
+		<div class="logo" onclick="window.location.href='/mall'"></div>
+		<div style="margin-top:25px;margin-left:20px;height:40px;width:340px;float:left;">
+			<table class="lead" border="0">
+				<tr>
+					<td width="75px"><div id="mall_link"><a href="?m=mall">集市</a></div></td> 
+					<td width="105px"><div id="index_link"><a href="?m=home">个人中心</a></div></td>
+					<!--<td width="105px"><div id="change_link"><a href="?m=chan">换客天地</a></div></td>-->
+				</tr>
+				<tr>
+					<td><div class="red_line"></div></td>
+					<td><div class="green_line"></div></td>
+					<!--<td><div class="blue_line"></div></td>-->
+				</tr>
+			</table>
+		</div>
+		<div class="search">
+			<form name="search" method="post" action="?m=mall&a=search" style="height:26px;width:350px;margin-right:-8px;">
+				<div class="miao" style="float:left;border:1px solid #CCC;"><div class="select_mod">
+					&nbsp;<span class="search_sort_txt">全部</span>
+					<em></em>
+					<input type="hidden" name="search_type" id="search_type_top" value="0">
+					<ul id="search_sort_list">
+						<li class="search_list" id="search_all">全部</li>
+						<li class="search_list" id="search_mall">集市</li>
+						<li class="search_list" id="search_chan">换客</li>
+					</ul>
+				</div></div>
+				<input type="text" name="search_content" class="search_content" id="search_content_top" style="float:left;border:1px solid #CCC;line-height:24px;font-size:13px;" placeholder="&nbsp;请输入要搜索的商品名" x-webkit-speech/>
+				<input type="image" id="search_button" src="Application/Common/Image/search_button.jpg" height="26px" style="float:left;border:1px solid #CCC;"/>
+			</form>
+		</div>
+	</div>
+</div>
+<div class="header_bottom_mall"><div class="banner_mall">		<div class="set_width">
+			<div class="banner_left">				<div class="menu">
+					<table class="menu_table" border="0">
+						<tr>
+							<td><a href="?m=mall&a=scan&lb=0">手机</a></td>
+							<td><a href="?m=mall&a=scan&lb=1">电子</a></td> 
+						</tr>
+						<tr>
+							<td><a href="?m=mall&a=scan&lb=2">书籍</a></td>
+							<td><a href="?m=mall&a=scan&lb=3">车辆</a></td> 
+						</tr>
+						<tr>
+							<td><a href="?m=mall&a=scan&lb=4">服饰</a></td>
+							<td><a href="?m=mall&a=scan&lb=5">化妆</a></td> 
+						</tr>
+						<tr>
+							<td><a href="?m=mall&a=scan&lb=6">日用</a></td>
+							<td><a href="?m=mall&a=scan&lb=7">乐器</a></td> 
+						</tr>
+						<tr>
+							<td><a href="?m=mall&a=scan&lb=10">虚拟</a></td>
+							<td><a href="?m=mall&a=scan&lb=11">食品</a></td> 
+						</tr>
+						<tr>
+							<td><a href="?m=mall&a=scan&lb=8">房屋</a></td>
+							<td><a href="?m=mall&a=scan&lb=9">其他</a></td> 
+						</tr>
+					</table>
+				</div>	
+			</div>
+			<div class="banner_center"></div>			<div class="banner_right">
+				<!-- <form method="post" id="new_demand" action="?c=newgoods">
+					<div style="width:126px;margin:0px auto;height:28px;border:0px solid black;">
+						<div class="in_where" id="in_mall">在集市</div>
+						<div class="in_where" id="in_change">在换客</div>
+					</div>
+					<input type="hidden" name="in_where" id="in_where_input" value="0"/> -->
+					<div class="out_put" style="line-height: 66px;">
+						<a href="?c=newgoods">发布新需求</a>
+					</div>
+				<!-- </form> -->
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+var gree=$('.green_line');
+var red=$('.red_line');
+var blue=$('.blue_line');
+
+jQuery(function($){
+
+	if(page=='home')
+	{
+		gree.css("display","block");
+		red.css("display","none");
+		blue.css("display","none");
+	}
+	else if(page=='mall')
+	{
+		red.css("display","block");
+		gree.css("display","none");
+		blue.css("display","none");
+	}
+	else if(page=='chan')
+	{
+		blue.css("display","block");
+		gree.css("display","none");
+		red.css("display","none");
+	}
+	$('#index_link').hover(
+		function(){
+			gree.css("display","block");
+		},
+		function(){
+			if(page!="home")
+			{
+				gree.css("display","none");
+			}
+		});
+	$('#mall_link').hover(
+		function(){
+			red.css("display","block");
+		},
+		function(){
+			if(page!="mall")
+			{
+				red.css("display","none");
+			}
+		});
+	$('#change_link').hover(
+		function(){
+			blue.css("display","block");
+		},
+		function(){
+			if(page!="index")
+			{
+				blue.css("display","none");
+			}
+		});
+
+	$('.search_list').hover(
+		function(){
+			$(this).css("background-color","rgb(224, 224, 224)");
+		},
+		function(){
+			$(this).css("background-color","white");
+		});
+	$('.in_where').click(
+		function(){
+			if($(this).attr('id')=="in_change")
+			{
+				$('#in_change').css("background-color","#F56C7E");
+				$('#in_mall').css("background-color","#EFF4EE");
+				$('#in_where_input').val("1");
+			}
+			else
+			{
+				$('#in_change').css("background-color","#EFF4EE");
+				$('#in_mall').css("background-color","#F56C7E");
+				$('#in_where_input').val("0");
+			}
+		});
+	$('.search_list').click(	//$_GET['type']=0全部 1商城 2换客
+		function(){
+			var type=$(this).attr('id');
+			var aim=$('.search_sort_txt');
+			if(type=="search_all")
+			{
+				aim.html('全部');
+				$('#search_type').val('0');
+			}	
+			else if(type=="search_chan")
+			{
+				aim.html('换客');
+				$('#search_type').val('2');
+			}
+			else if(type=="search_mall")
+			{
+				aim.html('集市');
+				$('#search_type').val('1');
+			}
+				
+			$('#search_sort_list').css("display","none");
+		});
+	$('.miao').hover(
+		function(){
+			$('#search_sort_list').css("display","block");
+		},
+		function(){
+			$('#search_sort_list').css("display","none");
+		});
+	$('#search_button').click(	//搜索不为空
+		function(e){
+			e.preventDefault();
+			if($('#search_content_top').val()!='')
+				window.location.href="?m=mall&a=search&search_content="+$('#search_content_top').val()+"&search_type="+$('#search_type_top').val();
+		});
+	$(window).scroll(function() //导航栏滚动事件
+	{
+		var th=$('.banner_left');
+		if(th.length<=0)
+			th=$('.banner_left_chan');
+		var scroll=$(window).scrollTop();		//获取滚动条上方隐藏的高度
+		if(scroll < 95)
+		{
+			th.css({top:95-scroll});
+		}		
+		else
+		 	th.css({top:'0px'});
+	});
+
+	$(window).keydown(
+		function(event)
+		{
+  			switch(event.keyCode)	//如果按下enter
+  			{
+  				case 13:
+  				{
+					if($('#search_content_top').is(':focus')==true)
+					{
+						event.preventDefault();
+						if($('#search_content_top').val()!='')
+						window.location.href="?m=mall&a=search&search_content="+$('#search_content_top').val()+"&search_type="+$('#search_type_top').val();
+					}
+			  	}	
+  			}
+  		});
+	$('.out_put').click(function(){
+		$('#new_demand').submit();
+	});
+
+	$('.out_put').hover(
+		function(){
+			$(this).css("font-weight","bold");
+		},
+		function()
+		{
+			$(this).css("font-weight","normal");
+		});
+});
+</script>
+
+	<div class="set_width panel-all clearfix">
+		<div class="panel-left"></div>
+		<div class="panel-center">
+			<div class="content">
+				<div class="box clearfix" id="9427">
+						<div class="box_left">
+							<img src="http://my.nuaa.edu.cn/ucenter/avatar.php?uid=326811&size=middle" width="80px" />							<div style="text-align:center;font-size:12px;">朱troy<input type="hidden" value="326811" id="uid" /></br><span style="color:#8D8B8C;">2017-12-19 23:05:46</span></div>
+						</div>
+						<div class="box_right">							<div class="box_right_top">
+								<div style="float:left;font-size:16px;line-height:32px;font-weight:bold;color:#FE5252;">出售							</div>
+							<div style="margin-left:8px;float:left;font-size:15px;min-width:200px;font-weight:bold;line-height:34px;"><a href="./?c=goods&id=9427" target="_blank">平安银行信用卡推荐</a></div>
+							<div style="float:left;font-size:18px;color:#FE5252;line-height:32px;">&nbsp;&nbsp;&nbsp;100<span style="color:black;font-size:15px;"> RMB</span></div>
+							<div style="float:right;font-size:16px;line-height:36px;"><img src="Application/Mall/Image/heart_grey.png"  class="heart" title="收藏"> <span style="color:#FE5252;" class="col_num">0</span>&nbsp;&nbsp;<img src="Application/Mall/Image/talk_green.png" onclick="document.location.href='./?m=mall&c=goods&id=9427#talk_both'" style="cursor:pointer;" title="查看回复"> <span style="color:#66C8A3;">0</span></div>
+						</div>
+						<div class="box_right_center"></div>
+						<div class="box_right_bottom" onclick="window.open('./?m=mall&c=goods&id=9427','_blank')" style="cursor:pointer;">
+							<table width="480px" height="28px" style="font-size:12px;float:left;" class="info_table">
+								<tr>
+									<td width="32px">地点 :</td><td width="33px">不限</td><td width="32px">分类 :</td><td width="35px">其他</td>
+									<td  width="57px">联系方式 :</td><td>15195752658</td>
+								</tr>
+							</table>
+							<div class="clearfix">
+								<div class="description description_class" style="width:468px;">平安银行年底放水，走推荐可以秒批，需要办信用卡的同学可以看过来了！批卡之后还可以有红包领哦！</div>							</div>
+						</div>
+						</div>
+						<div class="arrow"></div>
+					</div><div class="box clearfix" id="9171">
+						<div class="box_left">
+							<img src="http://my.nuaa.edu.cn/ucenter/avatar.php?uid=183522&size=middle" width="80px" />							<div style="text-align:center;font-size:12px;">云谁之思<input type="hidden" value="183522" id="uid" /></br><span style="color:#8D8B8C;">2017-12-19 21:03:57</span></div>
+						</div>
+						<div class="box_right">							<div class="box_right_top">
+								<div style="float:left;font-size:16px;line-height:32px;font-weight:bold;color:#FE5252;">出售							</div>
+							<div style="margin-left:8px;float:left;font-size:15px;min-width:200px;font-weight:bold;line-height:34px;"><a href="./?c=goods&id=9171" target="_blank">各种多肉，盆栽，以及各种绿植</a></div>
+							<div style="float:left;font-size:18px;color:#FE5252;line-height:32px;">面议<span style="color:black;font-size:15px;"> RMB</span></div>
+							<div style="float:right;font-size:16px;line-height:36px;"><img src="Application/Mall/Image/heart_grey.png"  class="heart" title="收藏"> <span style="color:#FE5252;" class="col_num">0</span>&nbsp;&nbsp;<img src="Application/Mall/Image/talk_green.png" onclick="document.location.href='./?m=mall&c=goods&id=9171#talk_both'" style="cursor:pointer;" title="查看回复"> <span style="color:#66C8A3;">0</span></div>
+						</div>
+						<div class="box_right_center"></div>
+						<div class="box_right_bottom" onclick="window.open('./?m=mall&c=goods&id=9171','_blank')" style="cursor:pointer;">
+							<table width="480px" height="28px" style="font-size:12px;float:left;" class="info_table">
+								<tr>
+									<td width="32px">地点 :</td><td width="33px">不限</td><td width="32px">分类 :</td><td width="35px">其他</td>
+									<td  width="57px">联系方式 :</td><td>15605183697</td>
+								</tr>
+							</table>
+							<div class="clearfix">
+								<div style="float:left;width:110px;"><img src="./Uploads/2017-06-29/5954a73e03d31.JPG" width="110px"/></div><div class="description description_class">敏敏的慢生活小店
+https://shop296532892.taobao.com/?spm=a230r.7195193.1997079397.2.U8fGWl
+
+这是我姐姐开的淘宝小店。我们家在花木之乡，家里种植绿植。所以，如果纸飞机的各位想买绿植，可以到我姐姐的店铺去看看。可以在旺旺上找一下我姐。报我航的名字可以给折扣。
+同时，欢迎收藏店铺。么么哒</div>							</div>
+						</div>
+						</div>
+						<div class="arrow"></div>
+					</div><div class="box clearfix" id="9357">
+						<div class="box_left">
+							<img src="http://my.nuaa.edu.cn/ucenter/avatar.php?uid=183522&size=middle" width="80px" />							<div style="text-align:center;font-size:12px;">云谁之思<input type="hidden" value="183522" id="uid" /></br><span style="color:#8D8B8C;">2017-12-19 21:03:55</span></div>
+						</div>
+						<div class="box_right">							<div class="box_right_top">
+								<div style="float:left;font-size:16px;line-height:32px;font-weight:bold;color:#FE5252;">出售							</div>
+							<div style="margin-left:8px;float:left;font-size:15px;min-width:200px;font-weight:bold;line-height:34px;"><a href="./?c=goods&id=9357" target="_blank">matlab超级学习手册</a></div>
+							<div style="float:left;font-size:18px;color:#FE5252;line-height:32px;">&nbsp;&nbsp;&nbsp;25<span style="color:black;font-size:15px;"> RMB</span></div>
+							<div style="float:right;font-size:16px;line-height:36px;"><img src="Application/Mall/Image/heart_grey.png"  class="heart" title="收藏"> <span style="color:#FE5252;" class="col_num">0</span>&nbsp;&nbsp;<img src="Application/Mall/Image/talk_green.png" onclick="document.location.href='./?m=mall&c=goods&id=9357#talk_both'" style="cursor:pointer;" title="查看回复"> <span style="color:#66C8A3;">0</span></div>
+						</div>
+						<div class="box_right_center"></div>
+						<div class="box_right_bottom" onclick="window.open('./?m=mall&c=goods&id=9357','_blank')" style="cursor:pointer;">
+							<table width="480px" height="28px" style="font-size:12px;float:left;" class="info_table">
+								<tr>
+									<td width="32px">地点 :</td><td width="33px">本部</td><td width="32px">分类 :</td><td width="35px">书籍</td>
+									<td  width="57px">联系方式 :</td><td>15605183697</td>
+								</tr>
+							</table>
+							<div class="clearfix">
+								<div style="float:left;width:110px;"><img src="./Uploads/2017-11-12/5a083d841d5e1.jpg" width="110px"/></div><div class="description description_class">一本是小波分析，一本是智能算法。25/本。
+未拆封。
+双11在淘宝和京东分别买的，这两本买多了。
+所以挂上来造福需要的同学。</div>							</div>
+						</div>
+						</div>
+						<div class="arrow"></div>
+					</div><div class="box clearfix" id="9426">
+						<div class="box_left">
+							<img src="http://my.nuaa.edu.cn/ucenter/avatar.php?uid=546340&size=middle" width="80px" />							<div style="text-align:center;font-size:12px;">沉潜<input type="hidden" value="546340" id="uid" /></br><span style="color:#8D8B8C;">2017-12-17 16:23:56</span></div>
+						</div>
+						<div class="box_right">							<div class="box_right_top">
+								<div style="float:left;font-size:16px;line-height:32px;font-weight:bold;color:#FE5252;">出售							</div>
+							<div style="margin-left:8px;float:left;font-size:15px;min-width:200px;font-weight:bold;line-height:34px;"><a href="./?c=goods&id=9426" target="_blank">酷炫电动滑板车</a></div>
+							<div style="float:left;font-size:18px;color:#FE5252;line-height:32px;">&nbsp;&nbsp;&nbsp;1199<span style="color:black;font-size:15px;"> RMB</span></div>
+							<div style="float:right;font-size:16px;line-height:36px;"><img src="Application/Mall/Image/heart_grey.png"  class="heart" title="收藏"> <span style="color:#FE5252;" class="col_num">0</span>&nbsp;&nbsp;<img src="Application/Mall/Image/talk_green.png" onclick="document.location.href='./?m=mall&c=goods&id=9426#talk_both'" style="cursor:pointer;" title="查看回复"> <span style="color:#66C8A3;">0</span></div>
+						</div>
+						<div class="box_right_center"></div>
+						<div class="box_right_bottom" onclick="window.open('./?m=mall&c=goods&id=9426','_blank')" style="cursor:pointer;">
+							<table width="480px" height="28px" style="font-size:12px;float:left;" class="info_table">
+								<tr>
+									<td width="32px">地点 :</td><td width="33px">不限</td><td width="32px">分类 :</td><td width="35px">车辆</td>
+									<td  width="57px">联系方式 :</td><td>17625925768</td>
+								</tr>
+							</table>
+							<div class="clearfix">
+								<div style="float:left;width:110px;"><img src="./Uploads/2017-12-17/5a36299c3cea1.jpg" width="110px"/></div><div class="description description_class">由于换工作所以出售，该电动车只使用过5-6次，基本是全新的。</div>							</div>
+						</div>
+						</div>
+						<div class="arrow"></div>
+					</div><div class="box clearfix" id="9425">
+						<div class="box_left">
+							<img src="http://my.nuaa.edu.cn/ucenter/avatar.php?uid=215350&size=middle" width="80px" />							<div style="text-align:center;font-size:12px;">heavenwyt<input type="hidden" value="215350" id="uid" /></br><span style="color:#8D8B8C;">2017-12-17 11:57:47</span></div>
+						</div>
+						<div class="box_right">							<div class="box_right_top">
+								<div style="float:left;font-size:16px;line-height:32px;font-weight:bold;color:#FE5252;">出售							</div>
+							<div style="margin-left:8px;float:left;font-size:15px;min-width:200px;font-weight:bold;line-height:34px;"><a href="./?c=goods&id=9425" target="_blank">爱国者移动电源10000毫安</a></div>
+							<div style="float:left;font-size:18px;color:#FE5252;line-height:32px;">&nbsp;&nbsp;&nbsp;30<span style="color:black;font-size:15px;"> RMB</span></div>
+							<div style="float:right;font-size:16px;line-height:36px;"><img src="Application/Mall/Image/heart_grey.png"  class="heart" title="收藏"> <span style="color:#FE5252;" class="col_num">0</span>&nbsp;&nbsp;<img src="Application/Mall/Image/talk_green.png" onclick="document.location.href='./?m=mall&c=goods&id=9425#talk_both'" style="cursor:pointer;" title="查看回复"> <span style="color:#66C8A3;">0</span></div>
+						</div>
+						<div class="box_right_center"></div>
+						<div class="box_right_bottom" onclick="window.open('./?m=mall&c=goods&id=9425','_blank')" style="cursor:pointer;">
+							<table width="480px" height="28px" style="font-size:12px;float:left;" class="info_table">
+								<tr>
+									<td width="32px">地点 :</td><td width="33px">本部</td><td width="32px">分类 :</td><td width="35px">电子</td>
+									<td  width="57px">联系方式 :</td><td>15295544360</td>
+								</tr>
+							</table>
+							<div class="clearfix">
+								<div style="float:left;width:110px;"><img src="./Uploads/2017-12-17/5a35eb3b3a3a5.jpg" width="110px"/></div><div class="description description_class">转让爱国者移动电源10000毫安，买了一年多。3000毫安电池的手机能冲两次多，最近换手机用不到，所以转了。单独一个移动电源，无数据线无充电器，限本部。</div>							</div>
+						</div>
+						</div>
+						<div class="arrow"></div>
+					</div><div class="box clearfix" id="9423">
+						<div class="box_left">
+							<img src="http://my.nuaa.edu.cn/ucenter/avatar.php?uid=539529&size=middle" width="80px" />							<div style="text-align:center;font-size:12px;">风雨下西楼<input type="hidden" value="539529" id="uid" /></br><span style="color:#8D8B8C;">2017-12-16 19:52:06</span></div>
+						</div>
+						<div class="box_right">							<div class="box_right_top">
+								<div style="float:left;font-size:16px;line-height:32px;font-weight:bold;color:#FE5252;">出售							</div>
+							<div style="margin-left:8px;float:left;font-size:15px;min-width:200px;font-weight:bold;line-height:34px;"><a href="./?c=goods&id=9423" target="_blank">流畅的python</a></div>
+							<div style="float:left;font-size:18px;color:#FE5252;line-height:32px;">&nbsp;&nbsp;&nbsp;30<span style="color:black;font-size:15px;"> RMB</span></div>
+							<div style="float:right;font-size:16px;line-height:36px;"><img src="Application/Mall/Image/heart_grey.png"  class="heart" title="收藏"> <span style="color:#FE5252;" class="col_num">0</span>&nbsp;&nbsp;<img src="Application/Mall/Image/talk_green.png" onclick="document.location.href='./?m=mall&c=goods&id=9423#talk_both'" style="cursor:pointer;" title="查看回复"> <span style="color:#66C8A3;">0</span></div>
+						</div>
+						<div class="box_right_center"></div>
+						<div class="box_right_bottom" onclick="window.open('./?m=mall&c=goods&id=9423','_blank')" style="cursor:pointer;">
+							<table width="480px" height="28px" style="font-size:12px;float:left;" class="info_table">
+								<tr>
+									<td width="32px">地点 :</td><td width="33px">江宁</td><td width="32px">分类 :</td><td width="35px">书籍</td>
+									<td  width="57px">联系方式 :</td><td>手机15150666168 QQ827870305</td>
+								</tr>
+							</table>
+							<div class="clearfix">
+								<div style="float:left;width:110px;"><img src="./Uploads/2017-12-16/5a3508e65f9a8.jpg" width="110px"/></div><div class="description description_class">全新 没有字迹 角落没有皱痕</div>							</div>
+						</div>
+						</div>
+						<div class="arrow"></div>
+					</div><div class="box clearfix" id="9422">
+						<div class="box_left">
+							<img src="http://my.nuaa.edu.cn/ucenter/avatar.php?uid=539529&size=middle" width="80px" />							<div style="text-align:center;font-size:12px;">风雨下西楼<input type="hidden" value="539529" id="uid" /></br><span style="color:#8D8B8C;">2017-12-16 19:51:12</span></div>
+						</div>
+						<div class="box_right">							<div class="box_right_top">
+								<div style="float:left;font-size:16px;line-height:32px;font-weight:bold;color:#FE5252;">出售							</div>
+							<div style="margin-left:8px;float:left;font-size:15px;min-width:200px;font-weight:bold;line-height:34px;"><a href="./?c=goods&id=9422" target="_blank">应用随机过程：概率模型导</a></div>
+							<div style="float:left;font-size:18px;color:#FE5252;line-height:32px;">&nbsp;&nbsp;&nbsp;28<span style="color:black;font-size:15px;"> RMB</span></div>
+							<div style="float:right;font-size:16px;line-height:36px;"><img src="Application/Mall/Image/heart_grey.png"  class="heart" title="收藏"> <span style="color:#FE5252;" class="col_num">0</span>&nbsp;&nbsp;<img src="Application/Mall/Image/talk_green.png" onclick="document.location.href='./?m=mall&c=goods&id=9422#talk_both'" style="cursor:pointer;" title="查看回复"> <span style="color:#66C8A3;">0</span></div>
+						</div>
+						<div class="box_right_center"></div>
+						<div class="box_right_bottom" onclick="window.open('./?m=mall&c=goods&id=9422','_blank')" style="cursor:pointer;">
+							<table width="480px" height="28px" style="font-size:12px;float:left;" class="info_table">
+								<tr>
+									<td width="32px">地点 :</td><td width="33px">江宁</td><td width="32px">分类 :</td><td width="35px">书籍</td>
+									<td  width="57px">联系方式 :</td><td>手机15150666168 QQ827870305</td>
+								</tr>
+							</table>
+							<div class="clearfix">
+								<div style="float:left;width:110px;"><img src="./Uploads/2017-12-16/5a3508b00b658.jpg" width="110px"/></div><div class="description description_class">全新 没有字迹 角落没有皱痕</div>							</div>
+						</div>
+						</div>
+						<div class="arrow"></div>
+					</div><div class="box clearfix" id="9413">
+						<div class="box_left">
+							<img src="http://my.nuaa.edu.cn/ucenter/avatar.php?uid=539529&size=middle" width="80px" />							<div style="text-align:center;font-size:12px;">风雨下西楼<input type="hidden" value="539529" id="uid" /></br><span style="color:#8D8B8C;">2017-12-16 19:48:38</span></div>
+						</div>
+						<div class="box_right">							<div class="box_right_top">
+								<div style="float:left;font-size:16px;line-height:32px;font-weight:bold;color:#FE5252;">出售							</div>
+							<div style="margin-left:8px;float:left;font-size:15px;min-width:200px;font-weight:bold;line-height:34px;"><a href="./?c=goods&id=9413" target="_blank">算法设计入门经典</a></div>
+							<div style="float:left;font-size:18px;color:#FE5252;line-height:32px;">&nbsp;&nbsp;&nbsp;20<span style="color:black;font-size:15px;"> RMB</span></div>
+							<div style="float:right;font-size:16px;line-height:36px;"><img src="Application/Mall/Image/heart_grey.png"  class="heart" title="收藏"> <span style="color:#FE5252;" class="col_num">0</span>&nbsp;&nbsp;<img src="Application/Mall/Image/talk_green.png" onclick="document.location.href='./?m=mall&c=goods&id=9413#talk_both'" style="cursor:pointer;" title="查看回复"> <span style="color:#66C8A3;">0</span></div>
+						</div>
+						<div class="box_right_center"></div>
+						<div class="box_right_bottom" onclick="window.open('./?m=mall&c=goods&id=9413','_blank')" style="cursor:pointer;">
+							<table width="480px" height="28px" style="font-size:12px;float:left;" class="info_table">
+								<tr>
+									<td width="32px">地点 :</td><td width="33px">江宁</td><td width="32px">分类 :</td><td width="35px">书籍</td>
+									<td  width="57px">联系方式 :</td><td>手机15150666168 QQ827870305</td>
+								</tr>
+							</table>
+							<div class="clearfix">
+								<div style="float:left;width:110px;"><img src="./Uploads/2017-12-16/5a35047ef3779.jpg" width="110px"/></div><div class="description description_class">全新 没有字迹 角落没有皱痕</div>							</div>
+						</div>
+						</div>
+						<div class="arrow"></div>
+					</div><div class="box clearfix" id="9412">
+						<div class="box_left">
+							<img src="http://my.nuaa.edu.cn/ucenter/avatar.php?uid=539529&size=middle" width="80px" />							<div style="text-align:center;font-size:12px;">风雨下西楼<input type="hidden" value="539529" id="uid" /></br><span style="color:#8D8B8C;">2017-12-16 19:48:28</span></div>
+						</div>
+						<div class="box_right">							<div class="box_right_top">
+								<div style="float:left;font-size:16px;line-height:32px;font-weight:bold;color:#FE5252;">出售							</div>
+							<div style="margin-left:8px;float:left;font-size:15px;min-width:200px;font-weight:bold;line-height:34px;"><a href="./?c=goods&id=9412" target="_blank">编译原理</a></div>
+							<div style="float:left;font-size:18px;color:#FE5252;line-height:32px;">&nbsp;&nbsp;&nbsp;35<span style="color:black;font-size:15px;"> RMB</span></div>
+							<div style="float:right;font-size:16px;line-height:36px;"><img src="Application/Mall/Image/heart_grey.png"  class="heart" title="收藏"> <span style="color:#FE5252;" class="col_num">0</span>&nbsp;&nbsp;<img src="Application/Mall/Image/talk_green.png" onclick="document.location.href='./?m=mall&c=goods&id=9412#talk_both'" style="cursor:pointer;" title="查看回复"> <span style="color:#66C8A3;">0</span></div>
+						</div>
+						<div class="box_right_center"></div>
+						<div class="box_right_bottom" onclick="window.open('./?m=mall&c=goods&id=9412','_blank')" style="cursor:pointer;">
+							<table width="480px" height="28px" style="font-size:12px;float:left;" class="info_table">
+								<tr>
+									<td width="32px">地点 :</td><td width="33px">江宁</td><td width="32px">分类 :</td><td width="35px">书籍</td>
+									<td  width="57px">联系方式 :</td><td>手机15150666168 QQ827870305</td>
+								</tr>
+							</table>
+							<div class="clearfix">
+								<div style="float:left;width:110px;"><img src="./Uploads/2017-12-16/5a35043df1ef8.jpg" width="110px"/></div><div class="description description_class">全新 没有字迹 角落没有皱痕</div>							</div>
+						</div>
+						</div>
+						<div class="arrow"></div>
+					</div><div class="box clearfix" id="9411">
+						<div class="box_left">
+							<img src="http://my.nuaa.edu.cn/ucenter/avatar.php?uid=539529&size=middle" width="80px" />							<div style="text-align:center;font-size:12px;">风雨下西楼<input type="hidden" value="539529" id="uid" /></br><span style="color:#8D8B8C;">2017-12-16 19:48:17</span></div>
+						</div>
+						<div class="box_right">							<div class="box_right_top">
+								<div style="float:left;font-size:16px;line-height:32px;font-weight:bold;color:#FE5252;">出售							</div>
+							<div style="margin-left:8px;float:left;font-size:15px;min-width:200px;font-weight:bold;line-height:34px;"><a href="./?c=goods&id=9411" target="_blank">现代操作系统</a></div>
+							<div style="float:left;font-size:18px;color:#FE5252;line-height:32px;">&nbsp;&nbsp;&nbsp;35<span style="color:black;font-size:15px;"> RMB</span></div>
+							<div style="float:right;font-size:16px;line-height:36px;"><img src="Application/Mall/Image/heart_grey.png"  class="heart" title="收藏"> <span style="color:#FE5252;" class="col_num">0</span>&nbsp;&nbsp;<img src="Application/Mall/Image/talk_green.png" onclick="document.location.href='./?m=mall&c=goods&id=9411#talk_both'" style="cursor:pointer;" title="查看回复"> <span style="color:#66C8A3;">0</span></div>
+						</div>
+						<div class="box_right_center"></div>
+						<div class="box_right_bottom" onclick="window.open('./?m=mall&c=goods&id=9411','_blank')" style="cursor:pointer;">
+							<table width="480px" height="28px" style="font-size:12px;float:left;" class="info_table">
+								<tr>
+									<td width="32px">地点 :</td><td width="33px">江宁</td><td width="32px">分类 :</td><td width="35px">书籍</td>
+									<td  width="57px">联系方式 :</td><td>手机15150666168 QQ827870305</td>
+								</tr>
+							</table>
+							<div class="clearfix">
+								<div style="float:left;width:110px;"><img src="./Uploads/2017-12-16/5a3504188b913.jpg" width="110px"/></div><div class="description description_class">全新 没有字迹 角落没有皱痕</div>							</div>
+						</div>
+						</div>
+						<div class="arrow"></div>
+					</div><div class="box clearfix" id="9414">
+						<div class="box_left">
+							<img src="http://my.nuaa.edu.cn/ucenter/avatar.php?uid=539529&size=middle" width="80px" />							<div style="text-align:center;font-size:12px;">风雨下西楼<input type="hidden" value="539529" id="uid" /></br><span style="color:#8D8B8C;">2017-12-16 19:48:06</span></div>
+						</div>
+						<div class="box_right">							<div class="box_right_top">
+								<div style="float:left;font-size:16px;line-height:32px;font-weight:bold;color:#FE5252;">出售							</div>
+							<div style="margin-left:8px;float:left;font-size:15px;min-width:200px;font-weight:bold;line-height:34px;"><a href="./?c=goods&id=9414" target="_blank">模式分类</a></div>
+							<div style="float:left;font-size:18px;color:#FE5252;line-height:32px;">&nbsp;&nbsp;&nbsp;20<span style="color:black;font-size:15px;"> RMB</span></div>
+							<div style="float:right;font-size:16px;line-height:36px;"><img src="Application/Mall/Image/heart_grey.png"  class="heart" title="收藏"> <span style="color:#FE5252;" class="col_num">0</span>&nbsp;&nbsp;<img src="Application/Mall/Image/talk_green.png" onclick="document.location.href='./?m=mall&c=goods&id=9414#talk_both'" style="cursor:pointer;" title="查看回复"> <span style="color:#66C8A3;">0</span></div>
+						</div>
+						<div class="box_right_center"></div>
+						<div class="box_right_bottom" onclick="window.open('./?m=mall&c=goods&id=9414','_blank')" style="cursor:pointer;">
+							<table width="480px" height="28px" style="font-size:12px;float:left;" class="info_table">
+								<tr>
+									<td width="32px">地点 :</td><td width="33px">江宁</td><td width="32px">分类 :</td><td width="35px">书籍</td>
+									<td  width="57px">联系方式 :</td><td>手机15150666168 QQ827870305</td>
+								</tr>
+							</table>
+							<div class="clearfix">
+								<div style="float:left;width:110px;"><img src="./Uploads/2017-12-16/5a3504b4b3887.jpg" width="110px"/></div><div class="description description_class">全新 没有字迹 角落没有皱痕</div>							</div>
+						</div>
+						</div>
+						<div class="arrow"></div>
+					</div><div class="box clearfix" id="9415">
+						<div class="box_left">
+							<img src="http://my.nuaa.edu.cn/ucenter/avatar.php?uid=539529&size=middle" width="80px" />							<div style="text-align:center;font-size:12px;">风雨下西楼<input type="hidden" value="539529" id="uid" /></br><span style="color:#8D8B8C;">2017-12-16 19:47:54</span></div>
+						</div>
+						<div class="box_right">							<div class="box_right_top">
+								<div style="float:left;font-size:16px;line-height:32px;font-weight:bold;color:#FE5252;">出售							</div>
+							<div style="margin-left:8px;float:left;font-size:15px;min-width:200px;font-weight:bold;line-height:34px;"><a href="./?c=goods&id=9415" target="_blank">数据结构 c++描述</a></div>
+							<div style="float:left;font-size:18px;color:#FE5252;line-height:32px;">&nbsp;&nbsp;&nbsp;28<span style="color:black;font-size:15px;"> RMB</span></div>
+							<div style="float:right;font-size:16px;line-height:36px;"><img src="Application/Mall/Image/heart_grey.png"  class="heart" title="收藏"> <span style="color:#FE5252;" class="col_num">0</span>&nbsp;&nbsp;<img src="Application/Mall/Image/talk_green.png" onclick="document.location.href='./?m=mall&c=goods&id=9415#talk_both'" style="cursor:pointer;" title="查看回复"> <span style="color:#66C8A3;">0</span></div>
+						</div>
+						<div class="box_right_center"></div>
+						<div class="box_right_bottom" onclick="window.open('./?m=mall&c=goods&id=9415','_blank')" style="cursor:pointer;">
+							<table width="480px" height="28px" style="font-size:12px;float:left;" class="info_table">
+								<tr>
+									<td width="32px">地点 :</td><td width="33px">江宁</td><td width="32px">分类 :</td><td width="35px">书籍</td>
+									<td  width="57px">联系方式 :</td><td>手机15150666168 QQ827870305</td>
+								</tr>
+							</table>
+							<div class="clearfix">
+								<div style="float:left;width:110px;"><img src="./Uploads/2017-12-16/5a3504e391388.jpg" width="110px"/></div><div class="description description_class">全新 没有字迹 角落没有皱痕</div>							</div>
+						</div>
+						</div>
+						<div class="arrow"></div>
+					</div><div class="box clearfix" id="9416">
+						<div class="box_left">
+							<img src="http://my.nuaa.edu.cn/ucenter/avatar.php?uid=539529&size=middle" width="80px" />							<div style="text-align:center;font-size:12px;">风雨下西楼<input type="hidden" value="539529" id="uid" /></br><span style="color:#8D8B8C;">2017-12-16 19:47:39</span></div>
+						</div>
+						<div class="box_right">							<div class="box_right_top">
+								<div style="float:left;font-size:16px;line-height:32px;font-weight:bold;color:#FE5252;">出售							</div>
+							<div style="margin-left:8px;float:left;font-size:15px;min-width:200px;font-weight:bold;line-height:34px;"><a href="./?c=goods&id=9416" target="_blank">鸟哥的linux 服务器架构</a></div>
+							<div style="float:left;font-size:18px;color:#FE5252;line-height:32px;">&nbsp;&nbsp;&nbsp;35<span style="color:black;font-size:15px;"> RMB</span></div>
+							<div style="float:right;font-size:16px;line-height:36px;"><img src="Application/Mall/Image/heart_grey.png"  class="heart" title="收藏"> <span style="color:#FE5252;" class="col_num">0</span>&nbsp;&nbsp;<img src="Application/Mall/Image/talk_green.png" onclick="document.location.href='./?m=mall&c=goods&id=9416#talk_both'" style="cursor:pointer;" title="查看回复"> <span style="color:#66C8A3;">0</span></div>
+						</div>
+						<div class="box_right_center"></div>
+						<div class="box_right_bottom" onclick="window.open('./?m=mall&c=goods&id=9416','_blank')" style="cursor:pointer;">
+							<table width="480px" height="28px" style="font-size:12px;float:left;" class="info_table">
+								<tr>
+									<td width="32px">地点 :</td><td width="33px">江宁</td><td width="32px">分类 :</td><td width="35px">书籍</td>
+									<td  width="57px">联系方式 :</td><td>手机15150666168 QQ827870305</td>
+								</tr>
+							</table>
+							<div class="clearfix">
+								<div style="float:left;width:110px;"><img src="./Uploads/2017-12-16/5a35051444028.jpg" width="110px"/></div><div class="description description_class">全新 没有字迹 角落没有皱痕</div>							</div>
+						</div>
+						</div>
+						<div class="arrow"></div>
+					</div><div class="box clearfix" id="9417">
+						<div class="box_left">
+							<img src="http://my.nuaa.edu.cn/ucenter/avatar.php?uid=539529&size=middle" width="80px" />							<div style="text-align:center;font-size:12px;">风雨下西楼<input type="hidden" value="539529" id="uid" /></br><span style="color:#8D8B8C;">2017-12-16 19:47:28</span></div>
+						</div>
+						<div class="box_right">							<div class="box_right_top">
+								<div style="float:left;font-size:16px;line-height:32px;font-weight:bold;color:#FE5252;">出售							</div>
+							<div style="margin-left:8px;float:left;font-size:15px;min-width:200px;font-weight:bold;line-height:34px;"><a href="./?c=goods&id=9417" target="_blank">鸟哥的linux 基础篇</a></div>
+							<div style="float:left;font-size:18px;color:#FE5252;line-height:32px;">&nbsp;&nbsp;&nbsp;35<span style="color:black;font-size:15px;"> RMB</span></div>
+							<div style="float:right;font-size:16px;line-height:36px;"><img src="Application/Mall/Image/heart_grey.png"  class="heart" title="收藏"> <span style="color:#FE5252;" class="col_num">0</span>&nbsp;&nbsp;<img src="Application/Mall/Image/talk_green.png" onclick="document.location.href='./?m=mall&c=goods&id=9417#talk_both'" style="cursor:pointer;" title="查看回复"> <span style="color:#66C8A3;">0</span></div>
+						</div>
+						<div class="box_right_center"></div>
+						<div class="box_right_bottom" onclick="window.open('./?m=mall&c=goods&id=9417','_blank')" style="cursor:pointer;">
+							<table width="480px" height="28px" style="font-size:12px;float:left;" class="info_table">
+								<tr>
+									<td width="32px">地点 :</td><td width="33px">江宁</td><td width="32px">分类 :</td><td width="35px">书籍</td>
+									<td  width="57px">联系方式 :</td><td>手机15150666168 QQ827870305</td>
+								</tr>
+							</table>
+							<div class="clearfix">
+								<div style="float:left;width:110px;"><img src="./Uploads/2017-12-16/5a350554dfe05.jpg" width="110px"/></div><div class="description description_class">全新 没有字迹 角落没有皱痕</div>							</div>
+						</div>
+						</div>
+						<div class="arrow"></div>
+					</div><div class="box clearfix" id="9418">
+						<div class="box_left">
+							<img src="http://my.nuaa.edu.cn/ucenter/avatar.php?uid=539529&size=middle" width="80px" />							<div style="text-align:center;font-size:12px;">风雨下西楼<input type="hidden" value="539529" id="uid" /></br><span style="color:#8D8B8C;">2017-12-16 19:47:17</span></div>
+						</div>
+						<div class="box_right">							<div class="box_right_top">
+								<div style="float:left;font-size:16px;line-height:32px;font-weight:bold;color:#FE5252;">出售							</div>
+							<div style="margin-left:8px;float:left;font-size:15px;min-width:200px;font-weight:bold;line-height:34px;"><a href="./?c=goods&id=9418" target="_blank">计算机程序的构造和解释</a></div>
+							<div style="float:left;font-size:18px;color:#FE5252;line-height:32px;">&nbsp;&nbsp;&nbsp;20<span style="color:black;font-size:15px;"> RMB</span></div>
+							<div style="float:right;font-size:16px;line-height:36px;"><img src="Application/Mall/Image/heart_grey.png"  class="heart" title="收藏"> <span style="color:#FE5252;" class="col_num">0</span>&nbsp;&nbsp;<img src="Application/Mall/Image/talk_green.png" onclick="document.location.href='./?m=mall&c=goods&id=9418#talk_both'" style="cursor:pointer;" title="查看回复"> <span style="color:#66C8A3;">0</span></div>
+						</div>
+						<div class="box_right_center"></div>
+						<div class="box_right_bottom" onclick="window.open('./?m=mall&c=goods&id=9418','_blank')" style="cursor:pointer;">
+							<table width="480px" height="28px" style="font-size:12px;float:left;" class="info_table">
+								<tr>
+									<td width="32px">地点 :</td><td width="33px">江宁</td><td width="32px">分类 :</td><td width="35px">书籍</td>
+									<td  width="57px">联系方式 :</td><td>手机15150666168 QQ827870305</td>
+								</tr>
+							</table>
+							<div class="clearfix">
+								<div style="float:left;width:110px;"><img src="./Uploads/2017-12-16/5a3505ac98852.jpg" width="110px"/></div><div class="description description_class">全新 没有字迹 角落没有皱痕</div>							</div>
+						</div>
+						</div>
+						<div class="arrow"></div>
+					</div><div class="box clearfix" id="9421">
+						<div class="box_left">
+							<img src="http://my.nuaa.edu.cn/ucenter/avatar.php?uid=539529&size=middle" width="80px" />							<div style="text-align:center;font-size:12px;">风雨下西楼<input type="hidden" value="539529" id="uid" /></br><span style="color:#8D8B8C;">2017-12-16 19:46:51</span></div>
+						</div>
+						<div class="box_right">							<div class="box_right_top">
+								<div style="float:left;font-size:16px;line-height:32px;font-weight:bold;color:#FE5252;">出售							</div>
+							<div style="margin-left:8px;float:left;font-size:15px;min-width:200px;font-weight:bold;line-height:34px;"><a href="./?c=goods&id=9421" target="_blank">具体数学</a></div>
+							<div style="float:left;font-size:18px;color:#FE5252;line-height:32px;">&nbsp;&nbsp;&nbsp;35<span style="color:black;font-size:15px;"> RMB</span></div>
+							<div style="float:right;font-size:16px;line-height:36px;"><img src="Application/Mall/Image/heart_grey.png"  class="heart" title="收藏"> <span style="color:#FE5252;" class="col_num">0</span>&nbsp;&nbsp;<img src="Application/Mall/Image/talk_green.png" onclick="document.location.href='./?m=mall&c=goods&id=9421#talk_both'" style="cursor:pointer;" title="查看回复"> <span style="color:#66C8A3;">0</span></div>
+						</div>
+						<div class="box_right_center"></div>
+						<div class="box_right_bottom" onclick="window.open('./?m=mall&c=goods&id=9421','_blank')" style="cursor:pointer;">
+							<table width="480px" height="28px" style="font-size:12px;float:left;" class="info_table">
+								<tr>
+									<td width="32px">地点 :</td><td width="33px">江宁</td><td width="32px">分类 :</td><td width="35px">书籍</td>
+									<td  width="57px">联系方式 :</td><td>手机15150666168 QQ827870305</td>
+								</tr>
+							</table>
+							<div class="clearfix">
+								<div style="float:left;width:110px;"><img src="./Uploads/2017-12-16/5a3507abdc85e.jpg" width="110px"/></div><div class="description description_class">全新 没有字迹 角落没有皱痕</div>							</div>
+						</div>
+						</div>
+						<div class="arrow"></div>
+					</div><div class="box clearfix" id="9420">
+						<div class="box_left">
+							<img src="http://my.nuaa.edu.cn/ucenter/avatar.php?uid=539529&size=middle" width="80px" />							<div style="text-align:center;font-size:12px;">风雨下西楼<input type="hidden" value="539529" id="uid" /></br><span style="color:#8D8B8C;">2017-12-16 19:46:12</span></div>
+						</div>
+						<div class="box_right">							<div class="box_right_top">
+								<div style="float:left;font-size:16px;line-height:32px;font-weight:bold;color:#FE5252;">出售							</div>
+							<div style="margin-left:8px;float:left;font-size:15px;min-width:200px;font-weight:bold;line-height:34px;"><a href="./?c=goods&id=9420" target="_blank">stl源码剖析</a></div>
+							<div style="float:left;font-size:18px;color:#FE5252;line-height:32px;">&nbsp;&nbsp;&nbsp;25<span style="color:black;font-size:15px;"> RMB</span></div>
+							<div style="float:right;font-size:16px;line-height:36px;"><img src="Application/Mall/Image/heart_grey.png"  class="heart" title="收藏"> <span style="color:#FE5252;" class="col_num">0</span>&nbsp;&nbsp;<img src="Application/Mall/Image/talk_green.png" onclick="document.location.href='./?m=mall&c=goods&id=9420#talk_both'" style="cursor:pointer;" title="查看回复"> <span style="color:#66C8A3;">0</span></div>
+						</div>
+						<div class="box_right_center"></div>
+						<div class="box_right_bottom" onclick="window.open('./?m=mall&c=goods&id=9420','_blank')" style="cursor:pointer;">
+							<table width="480px" height="28px" style="font-size:12px;float:left;" class="info_table">
+								<tr>
+									<td width="32px">地点 :</td><td width="33px">江宁</td><td width="32px">分类 :</td><td width="35px">书籍</td>
+									<td  width="57px">联系方式 :</td><td>手机15150666168 QQ827870305</td>
+								</tr>
+							</table>
+							<div class="clearfix">
+								<div style="float:left;width:110px;"><img src="./Uploads/2017-12-16/5a350784a555e.jpg" width="110px"/></div><div class="description description_class">全新 没有字迹 角落没有皱痕</div>							</div>
+						</div>
+						</div>
+						<div class="arrow"></div>
+					</div><div class="box clearfix" id="9419">
+						<div class="box_left">
+							<img src="http://my.nuaa.edu.cn/ucenter/avatar.php?uid=539529&size=middle" width="80px" />							<div style="text-align:center;font-size:12px;">风雨下西楼<input type="hidden" value="539529" id="uid" /></br><span style="color:#8D8B8C;">2017-12-16 19:45:34</span></div>
+						</div>
+						<div class="box_right">							<div class="box_right_top">
+								<div style="float:left;font-size:16px;line-height:32px;font-weight:bold;color:#FE5252;">出售							</div>
+							<div style="margin-left:8px;float:left;font-size:15px;min-width:200px;font-weight:bold;line-height:34px;"><a href="./?c=goods&id=9419" target="_blank">离散数学及其应用</a></div>
+							<div style="float:left;font-size:18px;color:#FE5252;line-height:32px;">&nbsp;&nbsp;&nbsp;35<span style="color:black;font-size:15px;"> RMB</span></div>
+							<div style="float:right;font-size:16px;line-height:36px;"><img src="Application/Mall/Image/heart_grey.png"  class="heart" title="收藏"> <span style="color:#FE5252;" class="col_num">0</span>&nbsp;&nbsp;<img src="Application/Mall/Image/talk_green.png" onclick="document.location.href='./?m=mall&c=goods&id=9419#talk_both'" style="cursor:pointer;" title="查看回复"> <span style="color:#66C8A3;">0</span></div>
+						</div>
+						<div class="box_right_center"></div>
+						<div class="box_right_bottom" onclick="window.open('./?m=mall&c=goods&id=9419','_blank')" style="cursor:pointer;">
+							<table width="480px" height="28px" style="font-size:12px;float:left;" class="info_table">
+								<tr>
+									<td width="32px">地点 :</td><td width="33px">江宁</td><td width="32px">分类 :</td><td width="35px">书籍</td>
+									<td  width="57px">联系方式 :</td><td>手机15150666168 QQ827870305</td>
+								</tr>
+							</table>
+							<div class="clearfix">
+								<div style="float:left;width:110px;"><img src="./Uploads/2017-12-16/5a35075ebcda7.jpg" width="110px"/></div><div class="description description_class">全新 没有字迹 角落没有皱痕</div>							</div>
+						</div>
+						</div>
+						<div class="arrow"></div>
+					</div><div class="box clearfix" id="9410">
+						<div class="box_left">
+							<img src="http://my.nuaa.edu.cn/ucenter/avatar.php?uid=499007&size=middle" width="80px" />							<div style="text-align:center;font-size:12px;">hadesp<input type="hidden" value="499007" id="uid" /></br><span style="color:#8D8B8C;">2017-12-15 16:34:59</span></div>
+						</div>
+						<div class="box_right">							<div class="box_right_top">
+								<div style="float:left;font-size:16px;line-height:32px;font-weight:bold;color:#FE5252;">出售							</div>
+							<div style="margin-left:8px;float:left;font-size:15px;min-width:200px;font-weight:bold;line-height:34px;"><a href="./?c=goods&id=9410" target="_blank">入门版kindle带保护壳</a></div>
+							<div style="float:left;font-size:18px;color:#FE5252;line-height:32px;">&nbsp;&nbsp;&nbsp;300<span style="color:black;font-size:15px;"> RMB</span></div>
+							<div style="float:right;font-size:16px;line-height:36px;"><img src="Application/Mall/Image/heart_grey.png"  class="heart" title="收藏"> <span style="color:#FE5252;" class="col_num">0</span>&nbsp;&nbsp;<img src="Application/Mall/Image/talk_green.png" onclick="document.location.href='./?m=mall&c=goods&id=9410#talk_both'" style="cursor:pointer;" title="查看回复"> <span style="color:#66C8A3;">0</span></div>
+						</div>
+						<div class="box_right_center"></div>
+						<div class="box_right_bottom" onclick="window.open('./?m=mall&c=goods&id=9410','_blank')" style="cursor:pointer;">
+							<table width="480px" height="28px" style="font-size:12px;float:left;" class="info_table">
+								<tr>
+									<td width="32px">地点 :</td><td width="33px">江宁</td><td width="32px">分类 :</td><td width="35px">电子</td>
+									<td  width="57px">联系方式 :</td><td>qq 3292096443 电话18094245969</td>
+								</tr>
+							</table>
+							<div class="clearfix">
+								<div class="description description_class" style="width:468px;">带保护壳的kindle 499京东入门款
+图片联系后传给你
+保证没有任何质量问题</div>							</div>
+						</div>
+						</div>
+						<div class="arrow"></div>
+					</div><div class="box clearfix" id="9409">
+						<div class="box_left">
+							<img src="http://my.nuaa.edu.cn/ucenter/avatar.php?uid=541758&size=middle" width="80px" />							<div style="text-align:center;font-size:12px;">nanhanghql<input type="hidden" value="541758" id="uid" /></br><span style="color:#8D8B8C;">2017-12-15 09:36:00</span></div>
+						</div>
+						<div class="box_right_want">							<div class="box_right_top">
+								<div style="float:left;font-size:16px;line-height:32px;font-weight:bold;color:#66C8A3;">求购							</div>
+							<div style="margin-left:8px;float:left;font-size:15px;min-width:200px;font-weight:bold;line-height:34px;"><a href="./?c=goods&id=9409" target="_blank">七院的签派业务</a></div>
+							<div style="float:left;font-size:18px;color:#FE5252;line-height:32px;">&nbsp;&nbsp;&nbsp;10<span style="color:black;font-size:15px;"> RMB</span></div>
+							<div style="float:right;font-size:16px;line-height:36px;"><img src="Application/Mall/Image/heart_grey.png"  class="heart" title="收藏"> <span style="color:#FE5252;" class="col_num">0</span>&nbsp;&nbsp;<img src="Application/Mall/Image/talk_green.png" onclick="document.location.href='./?m=mall&c=goods&id=9409#talk_both'" style="cursor:pointer;" title="查看回复"> <span style="color:#66C8A3;">0</span></div>
+						</div>
+						<div class="box_right_center"></div>
+						<div class="box_right_bottom" onclick="window.open('./?m=mall&c=goods&id=9409','_blank')" style="cursor:pointer;">
+							<table width="480px" height="28px" style="font-size:12px;float:left;" class="info_table">
+								<tr>
+									<td width="32px">地点 :</td><td width="33px">江宁</td><td width="32px">分类 :</td><td width="35px">书籍</td>
+									<td  width="57px">联系方式 :</td><td>18913807851</td>
+								</tr>
+							</table>
+							<div class="clearfix">
+								<div class="description description_class" style="width:468px;"><span style="color:grey;" class="description">这个人很懒，没有留下任何商品描述</span></div>							</div>
+						</div>
+						</div>
+						<div class="arrow"></div>
+					</div>				<a href='javascript:void' id="to_top"></a>
+				<div class="page">
+					<div class="page_left_left" onclick="window.location.href='./?m=mall'"></div>
+										<div class="page_center" id="page_1" onclick="window.location.href='./?m=mall&page=1'"><div class="page_font">1</div></div><div class="page_center" id="page_2" onclick="window.location.href='./?m=mall&page=2'"><div class="page_font">2</div></div><div class="page_center" id="page_3" onclick="window.location.href='./?m=mall&page=3'"><div class="page_font">3</div></div><div class="page_center" id="page_4" onclick="window.location.href='./?m=mall&page=4'"><div class="page_font">4</div></div><div class="page_center" id="page_5" onclick="window.location.href='./?m=mall&page=5'"><div class="page_font">5</div></div><div class="page_center" id="page_6" onclick="window.location.href='./?m=mall&page=6'"><div class="page_font">6</div></div><div class="page_center" id="page_7" onclick="window.location.href='./?m=mall&page=7'"><div class="page_font">7</div></div><div class="page_center" id="page_8" onclick="window.location.href='./?m=mall&page=8'"><div class="page_font">8</div></div><div class="page_center" id="page_9" onclick="window.location.href='./?m=mall&page=9'"><div class="page_font">9</div></div>					<div class="page_right" onclick="window.location.href='./?m=mall&page=2'"></div>					<div class="page_right_right" onclick="window.location.href='./?m=mall&page=191'"></div>
+				</div>			</div>
+		</div>
+		<div class="panel-right">
+	<div class="record_font" style="background-color:red;display:none;+display:block;">&nbsp;&nbsp;通知</div>
+		<div class="record_area" style="background-color:#f66c7f;min-height:50px;padding-bottom:5px;display:none;+display:block;">
+			商城暂不兼容IE8内核以下的浏览器(包括360浏览器)，我们对给您造成的不便表示抱歉，感谢您的支持.
+		</div>
+		
+	<div class="record_font">&nbsp;&nbsp;商城公告</div>
+	<div class="record_area" style="min-height:50px;padding-bottom:5px;">
+		<ul>
+			<li><a href='./?m=admin&c=notice&id=8'>南航MALL管理办法</a></li><li><a href='./?m=admin&c=notice&id=27'>南航MALL正式上线</a></li><li><a href='./?m=admin&c=notice&id=9'>南航MALL用户指南</a></li><li><a href='./?m=admin&c=notice&id=29'>【商品】发布需知</a></li><li><a href='./?m=admin&c=notice&id=28'>【店铺】申请必读</a></li>		</ul>
+	</div>
+	<div class="record_font">&nbsp;&nbsp;最新店铺<div id="new_shop_a" style="font-size:12px;display:inline;float:right;padding-top:3px;margin-right:6px;">&nbsp;<a href="./?m=mall&c=shop&a=new_shop">我要开店</a></div></div>
+	<div class="record_area clearfix" style="min-height:10px;">
+		<ul>
+			<li><a href='./?m=mall&c=shop&id=189'>GChampion</a></li><li><a href='./?m=mall&c=shop&id=188'>文仔的鞋铺</a></li><li><a href='./?m=mall&c=shop&id=187'>啦啦啦是我</a></li><li><a href='./?m=mall&c=shop&id=186'>樱桃的小窝</a></li><li><a href='./?m=mall&c=shop&id=185'>陕西苹果</a></li>		</ul>
+		<div class="a_underline" style="float:right;margin:10px 5px 6px 0px;font-size:13px;"><a href='./?m=mall&c=shop&a=shop_list'>更多店铺...</a></div>
+	</div>
+	<div class="record_font">&nbsp;&nbsp;全站推荐</div>
+	<div class="record_area" style="padding-top:10px;">
+			</div>
+</div>
+	</div>
+	<div class="common_bottom" style="margin-top:0px;height:30px;width:100%;background-color:#404040;">
+	<div style="color:white;width:410px;margin:0 auto;line-height:30px;font-size:13px;">
+		<a href="http://my.nuaa.edu.cn">纸飞机南航青年网络社区</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copyright © 2014 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="./?m=mall&a=team">关于我们</a>
+	</div>
+</div>
+</body>
+<script>
+jQuery(function($)
+{
+	$('#page_'+page_this).css("background-image","url(Application/Mall/Image/circle_hover.png)");
+
+	$('.description').each(function(){
+		var str= String($(this).html());
+		var reg=new RegExp("\n","g"); 
+		str= str.replace(reg,"<br/>"); 
+		var regx=new RegExp(" ","g"); 
+		str= str.replace(regx,"&nbsp;"); 
+		$(this).html(str);
+	});
+
+
+	$(window).load(function(){
+		$('.panel-left').css("height",$(document).height()-(355));
+	});
+
+    $(window).scroll(function(){
+        if ($(window).scrollTop()>1000){
+            $("#to_top").fadeIn(500);
+        }
+        else
+        {
+            $("#to_top").fadeOut(500);
+        }
+    });
+
+    $("#to_top").click(function(){
+        $('body,html').animate({scrollTop:0},1000);
+        return false;
+    });
+
+    $("#to_top").hover(
+    function(){
+        $(this).css("background","transparent url(Application/Common/Image/sideToolbar.gif) -74px -62px no-repeat")
+    },
+    function(){
+    	$(this).css("background","transparent url(Application/Common/Image/sideToolbar.gif) -1px -62px no-repeat")
+    });
+	
+});
+</script>
+</html>

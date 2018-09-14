@@ -1,0 +1,17 @@
+[t10]
+FileName1=t10_forum.xml
+URL1=http://my.nuaa.edu.cn/forum.php?mod=viewthread&tid=306828&viewpid=4142809&from=&inajax=1&ajaxtarget=post_new
+Total=3
+ContentType=text/xml
+SnapshotXmlFile=snapshot_6.xml
+RequestHeaderFile=t10_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t10_ResponseHeader.txt
+FileName2=t10_anonymouspost.small.gif
+URL2=http://my.nuaa.edu.cn/static/image/magic/anonymouspost.small.gif
+FileName3=t10_edit.gif
+URL3=http://my.nuaa.edu.cn/static/image/common/edit.gif
+[ProtocolInfo]
+ProtocolId=QTWeb
+[AdditionalInfo]
+IsIgnorable=1

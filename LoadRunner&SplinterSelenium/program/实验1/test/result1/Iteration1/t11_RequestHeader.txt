@@ -1,0 +1,10 @@
+GET /forum.php?mod=viewthread&tid=306828 HTTP/1.1
+Referer: http://my.nuaa.edu.cn/forum.php
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729)
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-cn
+Accept: */*
+Connection: Keep-Alive
+Host: my.nuaa.edu.cn
+Cookie: PHPSESSID=l5kgj0tdt8j50l64ldnu4j7do3; kqNd_2132_sid=U8jEiD; myauth_uid=Ad2yQGwpLJSi%2FFsyBqabraq6RhACFToa6rGcFs7rtgIfxJgLHhURotdYm%2BgZH0CUDZSzRC35vdmDmp3IZHhj0s0%2BM6h2mgLhp321jJ%2FXEQwMoY7hRb3pQxyRM1O1JSx5X3Ryu25aFKxcmnYsw%2FG19wDYiGA8XQ9SfaoVLANs6t95ITuBZzmnQhiKVcA8RXUXBWqExMum7b5COmZzuVCVXLDYyHN0VVY%2Bm4xtg6KTNrcr2b587Qnn1T7%2FVTY2G6owyKmOWEg9GgKWhq4zBQw4JIj03gsYh8KKfxr71jXx1%2FntrInbk8NUGXGDDruDMQxv%2Fz72q%2FXLvkijIIk%2BR606HA%3D%3D; kqNd_2132_lastact=1513755321%09forum.php%09; kqNd_2132_saltkey=G9u14R9f; kqNd_2132_lastvisit=1513735829; kqNd_2132_ulastactivity=866524YF9Y23mlRG9gwDE9PQYc7U79tHUzO2u75V%2FTXosV3xjuex; kqNd_2132_auth=56f0rMugx6DItpO2nGLl9GVknl2FMw2qkWiyvnbCZXlFdzVDglsqEvD%2B4sJ7lT%2FXyGlUAavdUKzLqGDjl76uZ3SWj%2BQ; kqNd_2132_checkpm=1; kqNd_2132_sendmail=1; kqNd_2132_noticeTitle=1; kqNd_2132_lip=172.34.181.162%2C1513755115; kqNd_2132_nofavfid=1
+

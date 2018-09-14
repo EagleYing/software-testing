@@ -1,0 +1,18 @@
+Start auto log messages stack - Iteration 6.	[MsgId: MMSG-10545]
+Start auto log messages stack - Iteration 5.	[MsgId: MMSG-10545]
+Action3.c(130): Downloading resource "http://bdimg.share.baidu.com/static/api/css/share_popup.css?v=240f357d.css" (specified by argument number 63)  	[MsgId: MMSG-26577]
+Action3.c(130): Downloading resource "http://bdimg.share.baidu.com/static/api/css/select_share.css?v=15f56735.css" (specified by argument number 66)  	[MsgId: MMSG-26577]
+Action3.c(130): Downloading resource "http://bdimg.share.baidu.com/static/api/img/share/selectshare_close.png?v=1b34ee88.png" (specified by argument number 69)  	[MsgId: MMSG-26577]
+Action3.c(130): Downloading resource "http://bdimg.share.baidu.com/static/api/img/share/share-search-icon.png" (specified by argument number 72)  	[MsgId: MMSG-26577]
+Action3.c(130): Error -26627: HTTP Status-Code=404 (Not Found) for "http://my.nuaa.edu.cn/mall/?m=mall&c=goods&id=9043"  	[MsgId: MERR-26627]
+Action3.c(130): Downloading resource "http://bdimg.share.baidu.com/static/api/css/share_popup.css?v=240f357d.css" (specified by argument number 63)  	[MsgId: MMSG-26577]
+Action3.c(130): Downloading resource "http://bdimg.share.baidu.com/static/api/css/select_share.css?v=15f56735.css" (specified by argument number 66)  	[MsgId: MMSG-26577]
+Action3.c(130): Downloading resource "http://bdimg.share.baidu.com/static/api/img/share/selectshare_close.png?v=1b34ee88.png" (specified by argument number 69)  	[MsgId: MMSG-26577]
+Action3.c(130): Downloading resource "http://bdimg.share.baidu.com/static/api/img/share/share-search-icon.png" (specified by argument number 72)  	[MsgId: MMSG-26577]
+Action3.c(130): Error -26627: HTTP Status-Code=404 (Not Found) for "http://my.nuaa.edu.cn/mall/?m=mall&c=goods&id=9043"  	[MsgId: MERR-26627]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
